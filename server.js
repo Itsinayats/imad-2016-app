@@ -205,7 +205,7 @@ var heading=data.heading;
 var content=data.content;
 var category=data.category;
 var author=data.name;
-var tag=data.tag;
+var tag[]=data.tag;
 var template= `
 <!DOCTYPE html>
 <html lang="en">
@@ -297,7 +297,7 @@ var template= `
       <h1>${heading.toUpperCase()}</h1>
        <h4><span class="label label-info">${category}</span></h4>
       <h5><span class="glyphicon glyphicon-time"></span> Post by <b>${author}</b>, ${date.toDateString()}.</h5>
-      <h5><span class="label label-success">${tag}</span></h5><br>
+      <h5><span class="label label-success">${tag[1]}</span></h5><br>
       <p>${content}</p>
       <hr>
 
