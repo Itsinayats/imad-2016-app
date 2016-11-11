@@ -186,7 +186,7 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
              }
                  else{
                    
-                  var  articleData=result.rows[i];
+                  var  articleData=result.rows[0];
                   res.send(createTemplate(articleData));
                      
                  }
