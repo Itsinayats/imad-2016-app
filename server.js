@@ -185,9 +185,11 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
                 res.status(400).send('ARTICLE NOT FOUND');
              }
                  else{
-                  var  articleData=result.rows[0];
+                     for(var i=0;i<2;i++){
+                  var  articleData=result.rows[i];
                   res.send(createTemplate(articleData));
                      }
+                 }
              }
 });
 
