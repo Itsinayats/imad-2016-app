@@ -260,7 +260,7 @@ var template= `
         <ul class="nav navbar-nav">
             <li class=" bold"><a href="/">Home</a></li>
             <li><a href="#" class="bold" data-toggle="modal" data-target="#loginModal">Login</a></li>
-           <li><a href="#" class="bold" data-toggle="modal" data-target="#registerModal">Register</a></li>
+           <li><a href="m" class="bold" data-toggle="modal" data-target="#registerModal">Register</a></li>
            </ul>
            <div class="col-sm-3 col-md-3 pull-right">
             <form class="navbar-form" role="search">
@@ -374,31 +374,6 @@ var template= `
   </div>
   
   
-  
-  
-    <!-- Register Modal -->
-  <div class="modal fade" id="registerModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-
 
 
 
@@ -420,6 +395,45 @@ var template= `
 
 return template;
 }
+
+
+
+app.get('/m', function (req, res) {
+  res.send(`
+  
+     <!-- Register Modal -->
+  <div class="modal fade" id="registerModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+  
+ 
+
+  
+  
+  
+  
+  `);
+});
+
+
 
 
 
