@@ -360,6 +360,12 @@ background:	#E6E6FA;
   </div>
 </div>
 
+<ul class="pager">
+  <li><a href="#">Previous</a></li>
+  <li><a href="#">Next</a></li>
+</ul>
+
+
 
   <!-- LoginModal -->
   <div class="modal fade" id="loginModal" role="dialog">
