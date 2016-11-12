@@ -364,7 +364,7 @@ background:	#E6E6FA;
   <li><a href="#">Previous</a></li>
   <li><a href="#">Next</a></li>
 </ul>
-<footer class="container-fluid navbar navbar-inverse navbar-fixed-bottom">
+<footer class="container-fluid navbar navbar-inverse navbar-bottom">
   <p>Footer Text</p>
 </footer>
 
