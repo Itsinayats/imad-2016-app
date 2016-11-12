@@ -1,10 +1,11 @@
 var express = require('express');
 var app = express();
+var morgan = require('morgan');
 app.use(morgan('combined'));
 
 var http = require('http').Server(app);
 
-var morgan = require('morgan');
+
 var path = require('path');
 var Pool = require('pg').Pool;
 
