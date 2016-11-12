@@ -255,8 +255,8 @@ var template= `
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li class=" bold"><a href="#">Home</a></li>
-            <li><a href="#" class="btn btn-info btn-lg bold" data-toggle="modal" data-target="#loginModal">Login</a></li>
-           <li><a href="#" class="btn btn-info btn-lg bold" data-toggle="modal" data-target="#registerModal">Register</a></li>
+            <li><a href="#" class="bold" data-toggle="modal" data-target="#loginModal">Login</a></li>
+           <li><a href="#" class="bold" data-toggle="modal" data-target="#registerModal">Register</a></li>
            </ul>
            <div class="col-sm-3 col-md-3 pull-right">
             <form class="navbar-form" role="search">
@@ -346,15 +346,12 @@ var template= `
   </div>
 </div>
 
-<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
   <!-- LoginModal -->
   <div class="modal fade" id="loginModel" role="dialog">
     <div class="modal-dialog">
     
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -371,6 +368,9 @@ var template= `
       
     </div>
   </div>
+  
+  
+  
   
     <!-- Register Modal -->
   <div class="modal fade" id="registerModal" role="dialog">
