@@ -197,7 +197,7 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
  
  
  
- app.get('/articles/:articleName', function (req, res) {
+ app.get('/home', function (req, res) {
     response.setHeader("Location", "/");
     response.end();
      
