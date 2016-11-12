@@ -267,7 +267,7 @@ var template= `
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li class=" bold"><a href="#">Home</a></li>
-            <li><a href="#" class="bold" data-toggle="modal" data-target="#loginModal">Login</a></li>
+            <li><a href="/home" class="bold" data-toggle="modal" data-target="#loginModal">Login</a></li>
            <li><a href="#" class="bold" data-toggle="modal" data-target="#registerModal">Register</a></li>
            </ul>
            <div class="col-sm-3 col-md-3 pull-right">
