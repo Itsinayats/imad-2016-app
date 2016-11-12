@@ -195,15 +195,7 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
 
  });
  
- 
- 
- app.get('/home', function (req, res) {
-    response.setHeader("Location", "/");
-    response.end();
-     
- });
- 
- 
+
  
  
 
