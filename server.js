@@ -260,7 +260,7 @@ var template= `
         <ul class="nav navbar-nav">
             <li class=" bold"><a href="/">Home</a></li>
             <li><a href="#" class="bold" data-toggle="modal" data-target="#loginModal">Login</a></li>
-           <li><a href="m" class="bold" data-toggle="modal" data-target="#registerModal">Register</a></li>
+           <li><a href="#" class="bold" data-toggle="modal" data-target="#registerModal">Register</a></li>
            </ul>
            <div class="col-sm-3 col-md-3 pull-right">
             <form class="navbar-form" role="search">
@@ -373,34 +373,6 @@ var template= `
     </div>
   </div>
   
-  
-
-
-
-
-
-
-
-
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/ui/main.js"></script>
-</body>
-</html>
-
-`;
-
-return template;
-}
-
-
-
-app.get('/m', function (req, res) {
-  res.send(`
-  
      <!-- Register Modal -->
   <div class="modal fade" id="registerModal" role="dialog">
     <div class="modal-dialog">
@@ -424,14 +396,28 @@ app.get('/m', function (req, res) {
   
 </div>
   
- 
 
-  
-  
-  
-  
-  `);
-});
+
+
+
+
+
+
+
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/ui/main.js"></script>
+</body>
+</html>
+
+`;
+
+return template;
+}
+
 
 
 
