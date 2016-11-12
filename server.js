@@ -241,6 +241,10 @@ var template= `
   .bold{
       font-weight:bolder;
   }
+body {
+background:	#8A2BE2;
+      
+  }
 </style>
 </head>
 <body>
