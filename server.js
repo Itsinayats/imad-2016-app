@@ -242,7 +242,7 @@ var template= `
       font-weight:bolder;
   }
 body {
-background:	#8A2BE2;
+background:	#E6E6FA;
       
   }
 </style>
