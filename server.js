@@ -364,6 +364,9 @@ background:	#E6E6FA;
   <li><a href="#">Previous</a></li>
   <li><a href="#">Next</a></li>
 </ul>
+<footer class="container-fluid navbar navbar-inverse navbar-fixed-bottom">
+  <p>Footer Text</p>
+</footer>
 
 
 
@@ -446,9 +449,7 @@ background:	#E6E6FA;
 
 
 
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/ui/main.js"></script>
