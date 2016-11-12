@@ -305,7 +305,7 @@ background:	#E6E6FA;
       <h1>${heading.toUpperCase()}</h1>
        <h4><span class="label label-info">${category}</span></h4>
       <h5><span class="glyphicon glyphicon-time"></span> Post by <b>${author}</b>, ${date.toDateString()}.</h5>
-      <h5><span class="label label-success">${tag[0]}</span></h5><br>
+      <h5><span class="label label-success">${tag}</span></h5><br>
       <p>${content}</p>
       <hr>
 
