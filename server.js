@@ -348,7 +348,7 @@ var template= `
 
 
   <!-- LoginModal -->
-  <div class="modal fade" id="loginModel" role="dialog">
+  <div class="modal fade" id="loginModal" role="dialog">
     <div class="modal-dialog">
     
 
