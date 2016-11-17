@@ -73,7 +73,7 @@ app.get('/ui/style.css', function (req, res) {
 
 
 //blog
-app.get('/blog', function (req, res) {
+app.get('/blog',function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/blog', 'blog.html'));
 });
 
@@ -167,8 +167,8 @@ res.send(JSON.stringify(names));
 
 
 //articles
-
-app.get('/articles/:articleName/:page', function (req, res) {
+app.get('/blog', function (req, res) {
+//app.get('/articles/:articleName/:page', function (req, res) {
 // var articleName=req.params.articleName;
 //pool.query("Select * from articles,users where title='" + req.params.articleName + "'", function(err,result){
 pool.query("select article_tags.tag,articles.title,articles.content,articles.category,articles.heading, articles,date,users.name from articles,article_tags,users where article_tags.article_id=articles.id AND articles.title='"+ req.params.articleName +"' AND articles.author_id=users.id;",function(err,result){
