@@ -71,13 +71,13 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 
-
+/*
 //blog
 app.get('/blog',function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/blog', 'blog.html'));
 });
 
-
+*/
 
 
 
