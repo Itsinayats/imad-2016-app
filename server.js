@@ -306,7 +306,8 @@ background:	#E6E6FA;
       <div class="nav nav-stacked affix s" style="position:fixed">
    
       <button  data-toggle="collapse" data-target="#categories" id="catbtn" class=" btn btn-lg btn-info" style="width:320px;text-align:center;margin-top:50px">Categories</button>
-      <div id="categories" class="collapse"z-index:1">
+      
+      <div id="categories" class="collapse" style="Zindex:1">
       Loading categories......
       </div>
         </div>
