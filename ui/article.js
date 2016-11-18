@@ -44,7 +44,7 @@ window.onload=function() {
              
                heading.innerHTML=`<h1>${articleData[0].heading}</h1>`;
                category.innerHTML=`${articleData[0].category}`;
-               author.innerHTML=`${articleData[0].name}`;
+               author.innerHTML=`Post By <b>${articleData[0].name}</b>`;
                content.innerHTML=`${articleData[0].content}`;
                time.innerHTML=`${articleData[0].time}`;
               
