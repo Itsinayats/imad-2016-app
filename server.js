@@ -226,7 +226,8 @@ app.get('/blog',function(req,res){
              }
                  else{
                  // var  articleData=result.rows[0];
-                 // res.send(JSON.stringify(result.rows));
+                  res.send(JSON.stringify(result.rows));
+                   res.send(createTemplate());
                      
                  }
              }
@@ -243,7 +244,7 @@ app.get('/blog',function(req,res){
 
 //TEMPLATE CODE
 
-function createTemplate(data){
+function createTemplate(){
 var template= `
 <!DOCTYPE html>
 <html lang="en">
