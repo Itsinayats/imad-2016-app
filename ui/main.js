@@ -207,8 +207,8 @@ function LoadCategories () {
         }
     };
     
-    request.open('GET', '/get-categories', true);
-    request.send(null);
+    request.open('GET', "/get-categories", true);
+    request.send();
 }
 
 
