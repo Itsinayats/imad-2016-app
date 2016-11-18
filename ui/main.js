@@ -185,8 +185,8 @@ request.send(null);
 };
 
 
-
-function LoadCategories () {
+var catbtn=document.getElementById('catbtn');
+catbtn=function () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
