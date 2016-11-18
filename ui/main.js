@@ -186,7 +186,7 @@ request.send(null);
 
 
 var catbtn=document.getElementById('catbtn');
-catbtn=function () {/*
+catbtn.onclick=function () {/*
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
