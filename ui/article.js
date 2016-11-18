@@ -48,7 +48,7 @@ window.onload=function() {
                category.innerHTML=`${articleData[0].category}`;
                author.innerHTML=`${articleData[0].name}`;
                content.innerHTML=`${articleData[0].content}`;
-               time.innerHTML=`${articleData[0].time.toDateString()}`;
+               time.innerHTML=`${articleData[0].time}`;
              
               
             } else {
