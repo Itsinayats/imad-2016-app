@@ -295,8 +295,8 @@ background:	#E6E6FA;
 </nav>
   <!--NAVBAR ENDS  -->
   
-   <div class="container-fluid">
-	<div class="row">
+       <div class="container-fluid">
+	  <div class="row">
 	  <!--left-->
       <div class="col-md-3" id="leftCol">
       <div class="nav nav-stacked affix s" style="position:fixed">
