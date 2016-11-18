@@ -212,12 +212,9 @@ function LoadCategories () {
 }
 
 
- 
-
-LoadCategories () ;
-
-
-
+window.onload=function(){
+    LoadCategories();
+};
 
 
 
