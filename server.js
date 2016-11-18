@@ -303,7 +303,7 @@ background:	#E6E6FA;
    
       <button class=" btn btn-lg btn-info" style="width:320px;text-align:center;margin-top:50px">Categories</button>
       <div id="categories">
-      Loading Articles......
+      Loading categories......
       </div>
         </div>
       </div><!--/left-->
