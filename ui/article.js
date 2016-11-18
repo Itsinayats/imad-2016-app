@@ -49,11 +49,11 @@ window.onload=function() {
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                   content.innerHTML=articleData[0].content;
+                   head.innerHTML=articleData[0].content;
                 }
                
             } else {
-                articles.innerHTML('Oops! Could not load all articles!');
+             
             }
         }
     };
