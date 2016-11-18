@@ -53,7 +53,7 @@ window.onload=function() {
         }
     };
     
-    request.open('GET', '/blog', true);
+    request.open('GET', '/get-blog-data', true);
     request.send();
 };
 
