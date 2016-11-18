@@ -88,6 +88,9 @@ app.get('/blog',function (req, res) {
 
 
 //images
+app.get('/ui/images/spinner.gif', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images', 'spinner.gif'));
+});
 
 app.get('/ui/images/inayat.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/images', 'inayat.jpg'));
@@ -304,10 +307,10 @@ background:	#E6E6FA;
       <div class="col-md-3" id="leftCol">
       <div class="nav nav-stacked affix s" style="position:fixed">
    
-      <button  data-toggle="collapse" data-target="#categories" id="catbtn" class=" btn btn-lg btn-info" style="width:320px;text-align:center;margin-top:50px">Categories</button>
+      <button  data-toggle="collapse" data-target="#categories" id="catbtn" class=" btn btn-lg btn-info" style="width:300px;text-align:center;margin-top:50px">Categories</button>
       
       <div id="categories" class="collapse" style="Zindex:1">
-      Loading categories......
+     <img src="ui/images/spinner.gif" width="50px" height="50px">
       </div>
         </div>
       </div><!--/left-->
