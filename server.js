@@ -76,19 +76,6 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 
-/*
-//blog
-app.get('/blog',function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/blog', 'blog.html'));
-});
-
-*/
-
-
-
-
-
-
 //images
 app.get('/ui/images/spinner.gif', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/images', 'spinner.gif'));
@@ -222,7 +209,7 @@ app.get('/get-categories', function (req, res) {
 
 
 //fetching recent article on blog home page
-app.get('/blog',function(req,res){
+app.get('/get-blog-data',function(req,res){
     pool.query("select article_tags.tag,articles.title,articles.content,articles.category,articles.heading, articles.time,users.name from articles,article_tags,users order by time DESC",function(err,result){
          if(err){
           res.status(500).send(err.toString()) ;
