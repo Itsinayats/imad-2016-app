@@ -310,7 +310,7 @@ background:	#E6E6FA;
       <button  data-toggle="collapse" data-target="#categories" id="catbtn" class=" btn btn-lg btn-info" style="width:300px;text-align:center;margin-top:50px">Categories</button>
       
       <div id="categories" class="collapse" style="Zindex:1">
-   <br> <center> <img src="ui/images/spinner.gif" width="50px" height="50px"></center>
+   <br> <center> <img src="/ui/images/spinner.gif" width="50px" height="50px"></center>
       </div>
         </div>
       </div><!--/left-->
@@ -320,7 +320,6 @@ background:	#E6E6FA;
       <h4><small>RECENT POSTS</small></h4>
       <hr>
       <h1>${heading.toUpperCase()}</h1>
-      <center> <img src="/ui/images/java.png" width="50px" height="50px"></center>
        <h4><span class="label label-info">${category}</span></h4>
       <h5><span class="glyphicon glyphicon-time"></span> Post by <b>${author}</b>, ${date.toDateString()}.</h5>
       <h5><span class="label label-success">${tag}</span></h5><br>
