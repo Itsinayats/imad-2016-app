@@ -50,7 +50,7 @@ window.onload=function() {
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                heading.innerHTML=articleData[i].heading;
+                    heading.innerHTML=articleData[i].heading;
                 }
                
             } else {
@@ -63,7 +63,7 @@ window.onload=function() {
     request.send(null);
 };
 
-
+window.onload=alert("hello");
 
 
 
