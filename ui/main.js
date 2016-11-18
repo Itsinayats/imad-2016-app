@@ -190,7 +190,7 @@ function LoadCategories () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            var articles = document.getElementById('articles');
+            var categories = document.getElementById('categories');
             if (request.status === 200) {
                 var content =  "<ul class='list-group' style='width:320px'>";
                 var CategoryList = JSON.parse(this.responseText);
@@ -200,9 +200,9 @@ function LoadCategories () {
                    </li>`;
                 }
                 content += "</ul>"
-                articles.innerHTML = content;
+                categories.innerHTML = content;
             } else {
-                articles.innerHTML('Oops! Could not load all articles!')
+                categoriess.innerHTML('Oops! Could not load all articles!')
             }
         }
     };
