@@ -45,11 +45,11 @@ window.onload=function() {
             var tags  = document.getElementById('tags');
             var content  = document.getElementById('content');
             var date  = document.getElementById('date');
-              content.innerHTML=articleData[0].content;
+            
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                 
+                   content.innerHTML=articleData[0].content;
                 }
                
             } else {
