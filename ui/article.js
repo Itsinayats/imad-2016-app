@@ -27,7 +27,17 @@ catbtn.onclick=function () {
  
 };
 
-function mysqlTimeStampToDate(timestamp) { var regex=/^([0-9]{2,4})-([0-1][0-9])-([0-3][0-9]) (?:([0-2][0-9]):([0-5][0-9]):([0-5][0-9]))?$/; var parts=timestamp.replace(regex,"$1 $2 $3 $4 $5 $6").split(' '); return new Date(parts[0],parts[1]-1,parts[2],parts[3],parts[4],parts[5]); }
+function mysqlTimeStampToDate(date) {
+    var hours = date.getHours();
+// Minutes part from the timestamp
+var minutes = "0" + date.getMinutes();
+// Seconds part from the timestamp
+var seconds = "0" + date.getSeconds();
+
+// Will display time in 10:30:23 format
+var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+    
+}
 
 
 window.onload=function() {
