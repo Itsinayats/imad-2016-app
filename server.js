@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
+/*
 //CONNECTION CREATION
 var pool=new Pool(config);
 app.get('/test-db', function (req, res) {
@@ -218,7 +218,7 @@ app.get('/get-categories', function (req, res) {
  
  
 
-/*
+
 //TEMPLATE CODE
 
 function createTemplate(data){
