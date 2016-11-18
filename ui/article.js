@@ -43,10 +43,11 @@ window.onload=function() {
             var h;
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
-                for (var i=0; i< articleData.length; i++) {
-                  h=`<h1>${articleData[0].heading}</h1>`;
-                }
-               heading.innerHTML=h;
+             
+               heading.innerHTML=`<h1>${articleData[0].heading}</h1>`;
+               category.innerHTML=`${articleData[0].category}`;
+        
+              
             } else {
              
             }
