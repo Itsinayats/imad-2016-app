@@ -183,3 +183,50 @@ request.open('GET','http://localhost:8080/submit_name?name='+name,true);
 request.send(null);
 
 };
+
+
+
+function LoadCategories () {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            var articles = document.getElementById('articles');
+            if (request.status === 200) {
+                var content =  "<ul class='list-group' style='width:320px'>";
+                var CategoryList = JSON.parse(this.responseText);
+                for (var i=0; i< CategoryList.length; i++) {
+                    content += `<li>
+                     <li class="list-group-item">${CategoryList[i]}<span class="badge">12</span></li>
+                   </li>`;
+                }
+                content += "</ul>"
+                articles.innerHTML = content;
+            } else {
+                articles.innerHTML('Oops! Could not load all articles!')
+            }
+        }
+    };
+    
+    request.open('GET', '/get-articles', true);
+    request.send(null);
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
