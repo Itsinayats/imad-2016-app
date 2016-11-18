@@ -215,7 +215,7 @@ app.get('/get-categories', function (req, res) {
 
 //fetching recent article on blog home page
 app.get('/blog',function(req,res){
-    pool.query("select * from articles order by time DESC",function(err,result){
+    pool.query("select article_tags.tag,articles.title,articles.content,articles.category,articles.heading, articles.time,users.name from articles,article_tags,users order by time DESC",function(err,result){
          if(err){
           res.status(500).send(err.toString()) ;
           }
