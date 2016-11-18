@@ -27,10 +27,6 @@ catbtn.onclick=function () {
  
 };
 
-function loadTags(articles){
-    
-    
-}
 
 
 
@@ -59,7 +55,7 @@ window.onload=function() {
     };
     
     request.open('GET', '/blog', true);
-    request.send(null);
+    request.send();
 };
 
 
