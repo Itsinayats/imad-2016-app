@@ -42,7 +42,9 @@ app.get('/test-db', function (req, res) {
  
 });
 
-
+app.get('/blog', function (req, res) {
+res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
+});
 
 //BOOTSTRAP FILES INCLUDES
 app.get('/ui/css/bootstrap.min.css', function (req, res) {
