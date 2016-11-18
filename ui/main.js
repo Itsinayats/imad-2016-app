@@ -186,7 +186,7 @@ request.send(null);
 
 
 var catbtn=document.getElementById('catbtn');
-catbtn=function () {
+catbtn=function () {/*
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -209,14 +209,10 @@ catbtn=function () {
     
     request.open('GET', "/get-categories", true);
     request.send();
+    */
+    alert("hello");
 };
 
-
-window.onload=function(){
-    
- console.log("loaded my code");
-window.onload=alert("hello");   
-};
 
 
 
