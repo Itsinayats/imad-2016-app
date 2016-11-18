@@ -301,10 +301,10 @@ background:	#E6E6FA;
       <div class="col-md-3" id="leftCol">
       <div class="nav nav-stacked affix s" style="position:fixed">
    
-      <button class=" btn btn-lg btn-info" data-toggle="collapse" data-target="#cat" style="width:320px;text-align:center;margin-top:50px">Categories</button>
-      <div id="categories" class="collapse"z-index:1">
+      <button class=" btn btn-lg btn-info" style="width:320px;text-align:center;margin-top:50px">Categories</button>
+      <div id="categories">
       Loading Articles......
-     </div>
+      </div>
         </div>
       </div><!--/left-->
     
