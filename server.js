@@ -244,13 +244,6 @@ app.get('/blog',function(req,res){
 //TEMPLATE CODE
 
 function createTemplate(data){
-var title=data.title;
-var date=data.time;
-var heading=data.heading;
-var content=data.content;
-var category=data.category;
-var author=data.name;
-var tag=data.tag;
 var template= `
 <!DOCTYPE html>
 <html lang="en">
