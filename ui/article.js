@@ -27,18 +27,6 @@ catbtn.onclick=function () {
  
 };
 
-function mysqlTimeStampToDate(date) {
-    var hours = date.getHours();
-// Minutes part from the timestamp
-var minutes = "0" + date.getMinutes();
-// Seconds part from the timestamp
-var seconds = "0" + date.getSeconds();
-
-// Will display time in 10:30:23 format
-var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-   return formattedTime; 
-}
-
 
 window.onload=function() {
     var request = new XMLHttpRequest();
@@ -58,7 +46,7 @@ window.onload=function() {
                category.innerHTML=`${articleData[0].category}`;
                author.innerHTML=`${articleData[0].name}`;
                content.innerHTML=`${articleData[0].content}`;
-               time.innerHTML=`<h1>${mysqlTimeStampToDate(articleData[0].time)}</h1>`;
+               time.innerHTML=`<h1>${articleData[0].time.toDateString()}</h1>`;
               
             } else {
              
