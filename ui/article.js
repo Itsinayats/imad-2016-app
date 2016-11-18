@@ -39,20 +39,20 @@ window.onload=function() {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
+            var title  = document.getElementById('title');
             var heading = document.getElementById('heading');
             var category = document.getElementById('category');
             var author = document.getElementById('author');
-            var  = document.getElementById('content');
+            var tags  = document.getElementById('tags');
+            var content  = document.getElementById('content');
+            var date  = document.getElementById('date');
            
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                    content += `<li>
-                    <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li>`;
+                heading.innerHTML=articleData[i].heading;
                 }
-                content += "</ul>";
-                articles.innerHTML = content;
+               
             } else {
                 articles.innerHTML('Oops! Could not load all articles!');
             }
