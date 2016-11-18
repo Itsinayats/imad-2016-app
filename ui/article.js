@@ -44,12 +44,12 @@ window.onload=function() {
              
                heading.innerHTML=`<h1>${articleData[0].heading}</h1>`;
                category.innerHTML=`${articleData[0].category}`;
-               author.innerHTML=`Post By <b>${articleData[0].name}</b>`;
+               author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By <b>${articleData[0].name}</b>`;
                content.innerHTML=`${articleData[0].content}`;
                time.innerHTML=`${articleData[0].time}`;
               
             } else {
-             
+             content.innerHTML=`<b>Error Fetching Content</b>`;
             }
         }
     };
