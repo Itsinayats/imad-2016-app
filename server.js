@@ -225,9 +225,9 @@ app.get('/blog',function(req,res){
                 res.status(400).send('ARTICLE NOT FOUND');
              }
                  else{
-                
                   var  articleData=result.rows[0];
                   res.send(createTemplate(articleData));
+                  res.send(JSON.stringify(result.rows));
                      
                  }
              }
@@ -340,11 +340,11 @@ background:	#E6E6FA;
     
       <h4><small>RECENT POSTS</small></h4>
       <hr>
-      <h1>${heading.toUpperCase()}</h1>
-       <h4><span class="label label-info">${category}</span></h4>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by <b>${author}</b>, ${date.toDateString()}.</h5>
-      <h5><span class="label label-success" id="tags">Loading Tags...</span></h5><br>
-      <p>${content}</p>
+      <h1 id="heading">Loading Heading...</h1>                      
+       <h4 id="category"><span class="label label-info">Loading Category...</span></h4>
+      <h5 id="author"><span class="glyphicon glyphicon-time"></span> Post by <b>Loading Author...</b>,Loading Date...</h5>
+      <h5 id="tags"><span class="label label-success" id="tags">Loading Tags...</span></h5><br>
+      <p id="content"><img src="/ui/images/spinner.gif" width="100px" height="100px" style="margin-left:100px;"></p>
       <hr>
 
       <h4>Leave a Comment:</h4>
