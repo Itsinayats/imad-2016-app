@@ -42,11 +42,11 @@ window.onload=function() {
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
              
-               heading.innerHTML=`<h1>${articleData[0].heading}</h1>`;
-               category.innerHTML=`${articleData[0].category}`;
-               author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By <b>${articleData[0].name}</b>`;
-               content.innerHTML=`${articleData[0].content}`;
-               time.innerHTML=`${articleData[0].time}`;
+               heading.innerHTML=`<h1>${articleData[1].heading}</h1>`;
+               category.innerHTML=`${articleData[1].category}`;
+               author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By <b>${articleData[1].name}</b>`;
+               content.innerHTML=`${articleData[1].content}`;
+               time.innerHTML=`${articleData[1].time}`;
               
             } else {
              content.innerHTML=`<b>Error Fetching Content</b>`;
