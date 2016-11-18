@@ -225,7 +225,7 @@ app.get('/blog',function(req,res){
                 res.status(400).send('ARTICLE NOT FOUND');
              }
                  else{
-                  var  articleData=result.rows[0];
+                 // var  articleData=result.rows[0];
                   res.send(JSON.stringify(result.rows));
                      
                  }
