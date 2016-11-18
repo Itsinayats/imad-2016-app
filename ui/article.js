@@ -44,9 +44,9 @@ window.onload=function() {
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                  h=`<h1>${articleData[0].heading}</h1>`;
+                  h=`<h1>${articleData[i].heading}</h1>`;
                 }
-               heading.innerHTML=h
+               heading.innerHTML=h;
             } else {
              
             }
