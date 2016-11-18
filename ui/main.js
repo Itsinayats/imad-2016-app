@@ -213,6 +213,7 @@ function LoadCategories () {
 
 
 window.onload=function(){
+    alert("ok");
  document.getElementById('categories').innerHTML='hello';
 };
 
