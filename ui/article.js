@@ -39,18 +39,17 @@ window.onload=function() {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-            var title  = document.getElementById('title');
             var heading = document.getElementById('heading');
             var category = document.getElementById('category');
             var author = document.getElementById('author');
             var tags  = document.getElementById('tags');
             var content  = document.getElementById('content');
             var date  = document.getElementById('date');
-           
+              content.innerHTML=articleData[0].content;
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                    heading.innerHTML=articleData[i].heading;
+                 
                 }
                
             } else {
@@ -63,7 +62,6 @@ window.onload=function() {
     request.send(null);
 };
 
-window.onload=alert("hello");
 
 
 
