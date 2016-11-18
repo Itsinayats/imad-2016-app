@@ -39,14 +39,17 @@ window.onload=function() {
             var author = document.getElementById('author');
             var tags  = document.getElementById('tags');
             var content  = document.getElementById('content');
-            var date  = document.getElementById('date');
-            var h;
+            var time  = document.getElementById('time');
+            
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
              
                heading.innerHTML=`<h1>${articleData[0].heading}</h1>`;
                category.innerHTML=`${articleData[0].category}`;
-        
+               author.innerHTML=`${articleData[0].author}`;
+               content.innerHTML=`${articleData[0].content}`;
+               time.innerHTML=`${articleData[0].time}`;
+             
               
             } else {
              
