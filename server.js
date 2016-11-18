@@ -42,6 +42,7 @@ app.get('/test-db', function (req, res) {
  
 });
 
+//load blog
 app.get('/blog', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
@@ -139,29 +140,8 @@ res.sendFile(path.join(__dirname, 'ui/images' , 'gl.jpg'));
 });
 
 
-//counter
-var counter=0;
-app.get('/counter',function(req, res){
-counter = counter + 1;
-res.send(counter.toString());
-
-});
-
-/* //CODE FOR GETTING names
-var names=[];
-//app.get('/submit_name/:name',function(req,res){
-app.get('/submit_name',function(req,res){
-//var name=req.params.name;   //way 1
-var name=req.query.name;
-names.push(name);
-res.send(JSON.stringify(names)); 
-});
-
-*/
 
 
-
-//get -articles
 //app.get('/blog', function (req, res) {
 app.get('/articles/:articleName', function (req, res) {
 // var articleName=req.params.articleName;
@@ -181,8 +161,7 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
              }
                  else{
                 
-                  var  articleData=result.rows[0];
-                  res.send(createTemplate(articleData));
+                 res.send(JSON.stringify(result.rows));
                      
                  }
              }
