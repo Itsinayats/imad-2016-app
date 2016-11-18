@@ -207,7 +207,7 @@ function LoadCategories () {
         }
     };
     
-    request.open('GET', '/get-articles', true);
+    request.open('GET', '/get-categories', true);
     request.send(null);
 }
 
