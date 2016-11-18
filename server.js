@@ -61,6 +61,10 @@ app.get('/ui/js/bootstrap.min.js', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+//article.js
+app.get('/ui/article.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article.js'));
+});
 //favicon
 app.get('/fevicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
@@ -456,7 +460,7 @@ background:	#E6E6FA;
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script  src="ui/article.js"></script>
+<script  src="/ui/article.js"></script>
 </body>
 </html>
 
