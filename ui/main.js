@@ -212,7 +212,11 @@ function LoadCategories () {
 }
 
 
-window.onload=alert("ok");
+window.onload=function(){
+    
+ console.log("loaded my code");
+window.onload=alert("hello");   
+};
 
 
 
