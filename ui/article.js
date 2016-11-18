@@ -45,13 +45,13 @@ window.onload=function() {
             var tags  = document.getElementById('tags');
             var content  = document.getElementById('content');
             var date  = document.getElementById('date');
-            
+            var h;
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
-                   head.innerHTML=articleData[0].content;
+                  h=`<h1>${articleData[0].heading}<h1>;`;
                 }
-               
+               content.innerHTML=h;
             } else {
              
             }
