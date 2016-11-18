@@ -226,8 +226,9 @@ app.get('/blog',function(req,res){
              }
                  else{
                  // var  articleData=result.rows[0];
-                  //res.send(JSON.stringify(result.rows));
+                 
                    res.send(createTemplate());
+                    res.send(JSON.stringify(result.rows));
                      
                  }
              }
