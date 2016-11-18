@@ -1,4 +1,5 @@
 console.log("loaded article.js");
+
 var catbtn=document.getElementById('catbtn');
 catbtn.onclick=function () {/*
     var request = new XMLHttpRequest();
