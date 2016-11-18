@@ -189,7 +189,7 @@ app.get('/get-categories', function (req, res) {
 
 //fetching recent article on blog home page
 app.get('/get-blog-data',function(req,res){
-    pool.query("select articles.title,articles.content,articles.category,articles.heading, articles.date,users.name from articles,article_tags,users where articles.author_id=users.id order by date DESC",function(err,result){
+    pool.query("select articles.title,articles.content,articles.category,articles.heading, articles.time,users.name from articles,article_tags,users where articles.author_id=users.id order by time DESC",function(err,result){
          if(err){
           res.status(500).send(err.toString()) ;
           }
