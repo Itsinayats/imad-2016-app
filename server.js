@@ -302,14 +302,9 @@ background:	#E6E6FA;
       <div class="nav nav-stacked affix s" style="position:fixed">
    
       <button class=" btn btn-lg btn-info" data-toggle="collapse" data-target="#cat" style="width:320px;text-align:center;margin-top:50px">Categories</button>
-      <div id="cat" class="collapse"z-index:1">
-  <ul class="list-group" style="width:320px;">
-  <li class="list-group-item">New <span class="badge">12</span></li>
-  <li class="list-group-item">Deleted <span class="badge">5</span></li> 
-  <li class="list-group-item">Warnings <span class="badge">3</span></li> 
-       </ul>
-         
-        </div>
+      <div id="categories" class="collapse"z-index:1">
+      Loading Articles......
+     </div>
         </div>
       </div><!--/left-->
     
