@@ -202,7 +202,7 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
 });
  
 
-
+//getting categories
 app.get('/get-categories', function (req, res) {
    pool.query('SELECT * FROM category', function (err, result) {
       if (err) {
@@ -213,7 +213,28 @@ app.get('/get-categories', function (req, res) {
    });
 });
 
- 
+//fetching recent article on blog home page
+app.get('/blog',function(req,res){
+    pool.query("select * from articles order by time DESC",function(err,result){
+         if(err){
+          res.status(500).send(err.toString()) ;
+          }
+     else{
+            if(result.rows.length===0)
+             {
+                res.status(400).send('ARTICLE NOT FOUND');
+             }
+                 else{
+                
+                  var  articleData=result.rows[0];
+                  res.send(createTemplate(articleData));
+                     
+                 }
+             }
+        
+    });
+    
+});
  
  
 
