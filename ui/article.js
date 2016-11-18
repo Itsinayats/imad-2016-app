@@ -49,7 +49,7 @@ window.onload=function() {
                author.innerHTML=`${articleData[0].name}`;
                content.innerHTML=`${articleData[0].content}`;
                time.innerHTML=`${articleData[0].time.toDateString()}`;
-             
+             alert("${articleData[0].time.toDateString()");
               
             } else {
              
