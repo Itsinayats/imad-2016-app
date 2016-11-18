@@ -46,7 +46,7 @@ window.onload=function() {
                category.innerHTML=`${articleData[0].category}`;
                author.innerHTML=`${articleData[0].name}`;
                content.innerHTML=`${articleData[0].content}`;
-               time.innerHTML=`<h1>${articleData[0].time.toDateString()}</h1>`;
+               time.innerHTML=`<h1>${articleData[0].time}</h1>`;
               
             } else {
              
