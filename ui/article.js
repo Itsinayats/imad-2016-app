@@ -46,7 +46,7 @@ window.onload=function() {
                 for (var i=0; i< articleData.length; i++) {
                   h=`<h1>${articleData[0].heading}</h1>;`;
                 }
-               content.innerHTML=h;
+               heading.innerHTML=h;
             } else {
              
             }
