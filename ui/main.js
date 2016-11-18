@@ -196,20 +196,20 @@ catbtn=function () {
                 var CategoryList = JSON.parse(this.responseText);
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `<li>
-                     <li class="list-group-item">${CategoryList[i]}<span class="badge">12</span></li>
+                     <li class="list-group-item">${CategoryList[i].name}<span class="badge">12</span></li>
                    </li>`;
                 }
-                content += "</ul>"
+                content += "</ul>";
                 categories.innerHTML = content;
             } else {
-                categoriess.innerHTML('Oops! Could not load all articles!')
+                categoriess.innerHTML('Oops! Could not load all articles!');
             }
         }
     };
     
     request.open('GET', "/get-categories", true);
     request.send();
-}
+};
 
 
 window.onload=function(){
