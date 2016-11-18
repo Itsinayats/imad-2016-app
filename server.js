@@ -140,7 +140,7 @@ res.sendFile(path.join(__dirname, 'ui/images' , 'gl.jpg'));
 });
 
 
-
+/*
 
 //app.get('/blog', function (req, res) {
 app.get('/articles/:articleName', function (req, res) {
@@ -170,7 +170,7 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
 });
  
 
-
+*/
 
 
 //getting categories
