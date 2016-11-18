@@ -177,7 +177,7 @@ res.send(JSON.stringify(names));
 app.get('/articles/:articleName', function (req, res) {
 // var articleName=req.params.articleName;
 //pool.query("Select * from articles,users where title='" + req.params.articleName + "'", function(err,result){
-pool.query("select article_tags.tag,articles.title,articles.content,articles.category,articles.heading, articles,date,users.name from articles,article_tags,users where article_tags.article_id=articles.id AND articles.title='"+ req.params.articleName +"' AND articles.author_id=users.id;",function(err,result){
+pool.query("select article_tags.tag,articles.title,articles.content,articles.category,articles.heading, articles,date,users.name from articles,article_tags,users where article_tags.article_id=articles.id AND articles.title='"+ req.params.articleName +"' AND articles.author_id=users.id  order by time DESC",function(err,result){
     
 
     
