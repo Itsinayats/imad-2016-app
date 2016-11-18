@@ -138,13 +138,13 @@ app.get('/ui/images/twitter.PNG', function (req, res) {
 });
 
 app.get('/ui/images/a.gif',function(req,res){
-res.sendFile(path.join(__dirname, 'ui/images' , 'a.gif'))
+res.sendFile(path.join(__dirname, 'ui/images' , 'a.gif'));
 });
 app.get('/ui/images/fb.jpg',function(req,res){
-res.sendFile(path.join(__dirname, 'ui/images' , 'fb.jpg'))
+res.sendFile(path.join(__dirname, 'ui/images' , 'fb.jpg'));
 });
 app.get('/ui/images/gl.jpg',function(req,res){
-res.sendFile(path.join(__dirname, 'ui/images' , 'gl.jpg'))
+res.sendFile(path.join(__dirname, 'ui/images' , 'gl.jpg'));
 });
 
 
@@ -218,7 +218,7 @@ app.get('/get-categories', function (req, res) {
  
  
 
-
+/*
 //TEMPLATE CODE
 
 function createTemplate(data){
@@ -471,7 +471,7 @@ return template;
 }
 
 
-
+*/
 
 
 
