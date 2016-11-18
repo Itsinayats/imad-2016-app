@@ -7,7 +7,7 @@ catbtn.onclick=function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var categories = document.getElementById('categories');
             if (request.status === 200) {
-                var content =  "<ul class='list-group' style='width:320px'>";
+                var content =  "<ul class='list-group' style='width:300px'>";
                 var CategoryList = JSON.parse(this.responseText);
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `<li>
