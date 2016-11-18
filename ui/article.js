@@ -10,9 +10,9 @@ catbtn.onclick=function () {
                 var content =  "<ul class='list-group' style='width:300px'>";
                 var CategoryList = JSON.parse(this.responseText);
                 for (var i=0; i< CategoryList.length; i++) {
-                    content += `<li>
+                    content += `
                      <li class="list-group-item">${CategoryList[i].name}<span class="badge">12</span></li>
-                   </li>`;
+                   `;
                 }
                 content += "</ul>";
                 categories.innerHTML = content;
