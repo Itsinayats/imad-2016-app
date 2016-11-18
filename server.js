@@ -166,7 +166,7 @@ res.send(JSON.stringify(names));
 
 
 
-//articles
+//get -articles
 app.get('/blog', function (req, res) {
 //app.get('/articles/:articleName/:page', function (req, res) {
 // var articleName=req.params.articleName;
@@ -197,6 +197,15 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
  
 
 
+app.get('/get-categories', function (req, res) {
+   pool.query('SELECT * FROM category', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
 
  
  
