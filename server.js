@@ -301,7 +301,7 @@ background:	#E6E6FA;
       <div class="col-md-3" id="leftCol">
       <div class="nav nav-stacked affix s" style="position:fixed">
    
-      <button id=""catbtn class=" btn btn-lg btn-info" style="width:320px;text-align:center;margin-top:50px">Categories</button>
+      <button id="catbtn" class=" btn btn-lg btn-info" style="width:320px;text-align:center;margin-top:50px">Categories</button>
       <div id="categories">
       Loading categories......
       </div>
