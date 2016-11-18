@@ -29,7 +29,6 @@ catbtn.onclick=function () {
 
 
 
-/*
 
 window.onload=function() {
     var request = new XMLHttpRequest();
@@ -59,6 +58,4 @@ window.onload=function() {
 };
 
 
-
-*/
 
