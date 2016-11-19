@@ -28,7 +28,7 @@ catbtn.onclick=function () {
 };
 
 
-function loadBlogData(articleData,i) {
+function loadBlogData(articleData,tagArray) {
             var heading = document.getElementById('heading');
             var category = document.getElementById('category');
             var author = document.getElementById('author');
@@ -41,8 +41,12 @@ function loadBlogData(articleData,i) {
                author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${articleData[i].name}</b>`;   
                content.innerHTML=`${articleData[i].content}`;
                time.innerHTML=`${articleData[i].time}`;
-                tags.innerHTML=`${articleData[i].tag}`;
+               var data="";  
+               for(var i=0;i<tagArray.length;i++){
+               data+=`<span class="label label-success">${tagArray[i]}<span>`;
               
+               }
+             tags.innerHTML=data;
             
 }
 
@@ -54,7 +58,11 @@ window.onload=function() {
              var content  = document.getElementById('content');
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
-                loadBlogData(articleData,0);
+                var arr=[];
+                for(var i=0;i<articleData.length;i++){
+                    arr.push(articleData[i].tag);
+                }
+                loadBlogData(articleData[0],arr);
              
               
             } else {
