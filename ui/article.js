@@ -43,7 +43,7 @@ function loadBlogData(articleData,i) {
                time.innerHTML=`${articleData[i].time}`;
            var x="";
                for(var j=0;j<articleData.length;j++){
-                   x+=`<span class="label label-danger">${articleData[j].tag}</span>&nbsp;`;
+                   x+=`<span class="label label-success">${articleData[j].tag}</span>&nbsp;`;
                }
                tags.innerHTML=x;
               
