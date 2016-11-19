@@ -208,28 +208,6 @@ app.get('/get-blog-data',function(req,res){
     
 });
 
-//load tags
-app.get('/loadTags',function(req,res){
-    pool.query("select article_tags.tag FROM articles,article_tags where articles.id=article_tags.article_id 
-    AND order by time DESC",function(err,result){
-         if(err){
-          res.status(500).send(err.toString()) ;
-          }
-     else{
-            if(result.rows.length===0)
-             {
-                res.status(400).send('ARTICLE NOT FOUND');
-             }
-                 else{
-                   res.send(JSON.stringify(result.rows));
-                     
-                 }
-             }
-        
-    });
-    
-});
- 
 
 
 
