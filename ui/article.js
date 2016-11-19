@@ -28,7 +28,7 @@ catbtn.onclick=function () {
 };
 
 
-function loadBlogData(articleData) {
+function loadBlogData(articleData,i) {
             var heading = document.getElementById('heading');
             var category = document.getElementById('category');
             var author = document.getElementById('author');
@@ -52,9 +52,8 @@ window.onload=function() {
              var content  = document.getElementById('content');
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
-               loadBlogData(articleData);
+               loadBlogData(articleData,0);
              
-              
             } else {
              content.innerHTML=`<b>Error Fetching Content</b>`;
             }
