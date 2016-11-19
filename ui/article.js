@@ -41,8 +41,12 @@ function loadBlogData(articleData,i) {
                author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${articleData[i].name}</b>`;   
                content.innerHTML=`${articleData[i].content}`;
                time.innerHTML=`${articleData[i].time}`;
+                tags.innerHTML=`${articleData[i].tag}`;
               
             
+}
+function loadTags(){
+    
 }
 
 
@@ -54,6 +58,7 @@ window.onload=function() {
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 loadBlogData(articleData,0);
+                loadTags();
               
             } else {
              content.innerHTML=`<b>Error Fetching Content</b>`;
