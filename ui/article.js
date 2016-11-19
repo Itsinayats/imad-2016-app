@@ -40,7 +40,7 @@ function loadBlogData(articleData,i) {
                category.innerHTML=`${articleData[i].category}`;
                author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${articleData[i].name}</b>`;   
                content.innerHTML=`${articleData[i].content}`;
-               time.innerHTML=`${articleData[i].time.toLocaleDateString()}`;
+               time.innerHTML=`${articleData[i].time.split('T')[0]}`;
            var x="";
                for(var j=0;j<articleData.length;j++){
                    x+=`<span class="label label-success">${articleData[j].tag}</span>&nbsp;`;
