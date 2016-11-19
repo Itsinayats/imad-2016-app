@@ -53,7 +53,7 @@ window.onload=function() {
              var content  = document.getElementById('content');
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
-                loadBlogData(articleData,0);
+                loadBlogData(articleData,1);
               
             } else {
              content.innerHTML=`<b>Error Fetching Content</b>`;
