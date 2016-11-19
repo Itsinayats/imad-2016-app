@@ -45,9 +45,6 @@ function loadBlogData(articleData,i) {
               
             
 }
-function loadTags(){
-    
-}
 
 
 window.onload=function() {
