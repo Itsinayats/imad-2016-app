@@ -41,11 +41,12 @@ function loadBlogData(articleData,i) {
                author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${articleData[i].name}</b>`;   
                content.innerHTML=`${articleData[i].content}`;
                time.innerHTML=`${articleData[i].time}`;
-               var arr=[];
+           var x=`<span class="label label-info" id="category">`;
                for(var j=0;j<articleData.length;j++){
-                   arr.push(articleData[j].tag);
+                   x+=`${articleData[j].tag}</span>`;
                }
-               tags.innerHTML="hello";
+               tags.innerHTML=x;
+              
     
 }
 
