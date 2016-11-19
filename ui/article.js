@@ -46,7 +46,7 @@ function loadBlogData(articleData,tagArray) {
               data+=`<span class="label label-success">${tagArray[i]}<span>`;
               
                }
-            // tags.innerHTML=data;
+                tags.innerHTML=data;
             
 }
 
