@@ -41,6 +41,11 @@ function loadBlogData(articleData,i) {
                author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${articleData[i].name}</b>`;   
                content.innerHTML=`${articleData[i].content}`;
                time.innerHTML=`${articleData[i].time}`;
+               var arr=[];
+               for(var j=0;j<articleData.length;j++){
+                   arr.push(articleData[j].tag);
+               }
+               tags.innerHTML="hello";
     
 }
 
