@@ -13,7 +13,7 @@ catbtn.onclick=function () {
                 var CategoryList = JSON.parse(this.responseText);                                      
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <li class="list-group-item"><a href="#">${CategoryList[i].name}</a><span class="badge">${CategoryList[i].count}</span></li>
+                     <li class="list-group-item"><a href="#">${CategoryList[i].category}</a><span class="badge">${CategoryList[i].count}</span></li>
                    `;
                 }
                 content += "</ul>";
