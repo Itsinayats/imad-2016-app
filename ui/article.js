@@ -1,5 +1,7 @@
 console.log("loaded article.js");
 
+
+//load categories
 var catbtn=document.getElementById('catbtn');
 catbtn.onclick=function () {
     var request = new XMLHttpRequest();
@@ -27,7 +29,7 @@ catbtn.onclick=function () {
  
 };
 
-
+//load initially latest article
 function loadBlogData(articleData,i) {
             var heading = document.getElementById('heading');
             var category = document.getElementById('category');
@@ -47,10 +49,13 @@ function loadBlogData(articleData,i) {
                }
                tags.innerHTML=x;
               
-    
-}
+    }
 
 
+
+
+
+//perform on windows start.
 window.onload=function() {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
