@@ -1,5 +1,9 @@
 console.log("loaded article.js");
 
+document.getElementById('leaveComment').onclick=function(){
+    alert("please Login First");
+}
+
 
 //load categories
 var catbtn=document.getElementById('catbtn');
