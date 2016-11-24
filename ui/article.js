@@ -50,14 +50,14 @@ catbtn.onclick=function () {
             if (request.status === 200) {
                 var content =  "<ul class='list-group' style='width:300px'>";
                 var CategoryList = JSON.parse(this.responseText);                                      
-                for (var i=0; i< CategoryList.length; i++) {
+           /*     for (var i=0; i< CategoryList.length; i++) {
                     content += `
                      <li class="list-group-item"><a id="${CategoryList[i].name}" onclick="getArticles(this.id)" href="#" >${CategoryList[i].name}</a><span id="badge" class="badge"></span></li>
                    `;
                 
                 }
                     content += "</ul>";
-                 categories.innerHTML = content;
+                */ categories.innerHTML = content;
                 }
               
              else {
