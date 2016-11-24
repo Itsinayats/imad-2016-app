@@ -9,11 +9,11 @@ catbtn.onclick=function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var categories = document.getElementById('categories');
             if (request.status === 200) {
-                var content =  "";
-                var CategoryList = JSON.parse(this.responseText);                                      
+                var content ="";
+                var CategoryList = JSON.parse(this.responseText); 
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <button class="btn btn-alert" id="${CategoryList[i].name}" name="${CategoryList[i].name}">${CategoryList[i].name}</button>
+                     <button class="btn btn-info" id="${CategoryList[i].name}" name="${CategoryList[i].name} onclick="getArticles(this.name)">${CategoryList[i].name}</button>
                    `;
                 }
                 categories.innerHTML = content;
@@ -28,29 +28,41 @@ catbtn.onclick=function () {
  
 };
 
-
-function countCat(cat) {
-    var badge=document.getElementById('badge');
-    var request = new XMLHttpRequest();
+function getArticles(cat){
+       var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
-             var content  = document.getElementById('content');
+            var heading = document.getElementById('heading');
+            var category = document.getElementById('category');
+            var author = document.getElementById('author');
+            var tags  = document.getElementById('tags');
+            var content  = document.getElementById('content');
+            var time  = document.getElementById('time');
             if (request.status === 200) {
-                var articleData = JSON.parse(this.responseText);
-                for(var i=0;i<articleData.length;i++){
-                  badge1.innerHTML=articleData[0].count; 
+                 var data = JSON.parse(this.responseText); 
+                 for (var i=0; i< data.length; i++) {
+                
+               heading.innerHTML=`<h1>${data[i].heading}</h1>`;
+               category.innerHTML=`${data[i].category}`;
+             //  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[i].name}</b>`;   
+               content.innerHTML=`${data[i].content}`;
+               time.innerHTML=`${data[i].time.split('T')[0]}`;
+                 }
                 }
-             
-            } else {
-             content.innerHTML=`<b>Error Fetching Content</b>`;
+               
+             else {
+                 content.innerHTML("errror Loading articles");
+               
             }
         }
     };
     
-    request.open('GET', '/get-cat-count', true);
+        request.open('POST', '/getArticles', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({cat:cat})); 
-};
+        request.send(JSON.stringify({cat:cat}));     
+}
+
+
 
 
 
@@ -64,7 +76,7 @@ function countCat(cat) {
             var tags  = document.getElementById('tags');
             var content  = document.getElementById('content');
             var time  = document.getElementById('time');
-              heading.innerHTML=`<h1>${articleData[i].heading}</h1>`;
+             heading.innerHTML=`<h1>${articleData[i].heading}</h1>`;
                category.innerHTML=`${articleData[i].category}`;
                author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${articleData[i].name}</b>`;   
                content.innerHTML=`${articleData[i].content}`;
