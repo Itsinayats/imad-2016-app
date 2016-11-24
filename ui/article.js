@@ -23,7 +23,7 @@ function fetchArticles(cat){
                 }
                
              else {
-                 content.innerHTML('ooops!!!Sorry');
+            alert("article not found!!!");
                
             }
         }
