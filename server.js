@@ -178,12 +178,19 @@ app.post('/getArticles',function(req,res){
     
 });
 
-app.post('/getTags',function(req,res){
+
+
+
+app.get('/getTags',function(req,res){
     var id=req.body.id;
     pool.query("select tag from article_tags where article_id=$1",[id],function(err,result){
      res.send(JSON.stringify(result.rows));
 });
 });
+
+
+
+
 
 app.post('/getAuthor',function(req,res){
     var ai=req.body.author_id;
