@@ -13,7 +13,6 @@ function fetchArticles(cat){
             var tags  = document.getElementById('tags');
             var content  = document.getElementById('content');
             var time  = document.getElementById('time');
-            content.innerHTML="loading....";
             if (request.status === 200) {
                  var data = JSON.parse(this.responseText); 
                  for (var i=0; i< data.length; i++) {
