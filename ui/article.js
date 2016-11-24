@@ -50,9 +50,8 @@ function getAuthor(author_id){
           if (request.readyState === XMLHttpRequest.DONE) {
         
               if (request.status === 200) {
-                  var data = JSON.parse(this.responseText); 
-                 // return `<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].email}</b>`;
-                  author.innerHTML="CCCCCCC";
+                  var data = JSON.parse(this.responseText);
+                  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].name}</b>`;
               } else {
                   
               }
