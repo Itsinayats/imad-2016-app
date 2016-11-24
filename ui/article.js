@@ -1,7 +1,6 @@
 console.log("loaded article.js");
 
-function getArticles(cat){
-alert(cat);
+function fetchArticles(cat){
       var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -41,13 +40,6 @@ alert(cat);
 
 
 
-
-
-
-
-
-
-
 //load categories
 var catbtn=document.getElementById('catbtn');
 catbtn.onclick=function () {
@@ -60,7 +52,7 @@ catbtn.onclick=function () {
                 var CategoryList = JSON.parse(this.responseText); 
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <button class="btn btn-warning" id="${CategoryList[i].name}" name="${CategoryList[i].name}" onclick="getArticles(this.name)">${CategoryList[i].name}</button>
+                     <button class="btn btn-warning" id="${CategoryList[i].name}" name="${CategoryList[i].name}" onclick="fetchArticles(this.name)">${CategoryList[i].name}</button>
                    `;
                 }
                 categories.innerHTML = content;
