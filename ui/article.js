@@ -1,8 +1,8 @@
 console.log("loaded article.js");
-getAuthor(author_id){
+function getAuthor(author_id){
   return "goooooooooooooo"  ;
 }
-getTags(id){
+function getTags(id){
     return "jnjnjnjnjnj";
     
     
