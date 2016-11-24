@@ -175,12 +175,6 @@ function getTags(id){
     
 }
 
-var next=document.getElementById('next');
-next.onclick=function(){
-    k++;
-};
-
-
 
 
 
