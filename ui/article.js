@@ -42,7 +42,7 @@ function fetchArticles(cat){
                      </h5>
        <br><hr>
       <div id="content">
-                 <div class="col-sm-12 text-center"> <img src="/ui/images/spinner.gif" width="100px" height="100px"><p><strong>${data[k].content}</strong><p></div>
+                <p><strong>${data[k].content}</strong><p></div>
     
        </div>
                   <ul class="pager">
