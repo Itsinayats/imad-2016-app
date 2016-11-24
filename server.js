@@ -177,7 +177,7 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
 
 //getting categories
 app.get('/get-categories', function (req, res) {
-   pool.query('select category,count(*) from articles group by category', function (err, result) {
+   pool.query('select * from category category', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
@@ -185,6 +185,34 @@ app.get('/get-categories', function (req, res) {
       }
    });
 });
+
+
+//getting count for category
+
+app.get('/get-cat-count', function (req, res) {
+ var cat=req.body.cat;
+   pool.query('SELECT COUNT(category) FROM articles WHERE category=$1;',[cat], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
