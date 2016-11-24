@@ -15,17 +15,16 @@ function fetchArticles(cat){
             var time  = document.getElementById('time');
             if (request.status === 200) {
                  var data = JSON.parse(this.responseText); 
-                 for (var i=0; i< data.length; i++) {
-               heading.innerHTML=`<h1>${data[i].heading}</h1>`;
-               category.innerHTML=`${data[i].category}`;
-             //  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[i].name}</b>`;
-            var aut=`${data[i].author_id}`;
+              //   for (var i=0; i< data.length; i++) {
+               heading.innerHTML=`<h1>${data[1].heading}</h1>`;
+               category.innerHTML=`${data[1].category}`;
+               var aut=`${data[1].author_id}`;
                getAuthor(aut);
-               var id= `${data[i].id}`;
+               var id= `${data[1].id}`;
                getTags(id);
-               content.innerHTML=`${data[i].content}`;
-               time.innerHTML=`${data[i].time.split('T')[0]}`;
-                 }
+               content.innerHTML=`${data[1].content}`;
+               time.innerHTML=`${data[1].time.split('T')[0]}`;
+            //     }
                 }
                
              else {
