@@ -202,7 +202,7 @@ app.get('/get-cat-count', function (req, res) {
 
 
 //getting articles
-app.get('/getArticles',function(req,res){
+app.post('/getArticles',function(req,res){
     var cat=req.body.category;
     pool.query("select *from articles where category=$1",[cat],function(err,result){
          if(err){
