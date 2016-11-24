@@ -159,7 +159,7 @@ app.get('/get-categories', function (req, res) {
 //getting articles
 app.post('/getArticles',function(req,res){
     var cat=req.body.category;
-    pool.query("select *from articles where category=$1",[cat],function(err,result){
+    pool.query("select * from articles where category=$1",[cat],function(err,result){
          if(err){
           res.status(500).send(err.toString()) ;
           }
@@ -208,7 +208,8 @@ app.post('/getTags',function(req,res){
 //get author
 app.post('/getAuthor',function(req,res){
     var ai=req.body.author_id;
-    pool.query("select name from users where id=$1",[ai],function(err,result){
+    console.log(ai);
+    pool.query("select * from users where id=$1",[ai],function(err,result){
          if(err){
           res.status(500).send(err.toString()) ;
           }
