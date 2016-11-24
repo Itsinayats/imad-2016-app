@@ -23,7 +23,7 @@ function fetchArticles(cat){
                 }
                
              else {
-                 content.innerHTML("errror Loading articles");
+                 content.innerHTML('ooops!!!Sorry');
                
             }
         }
@@ -32,7 +32,7 @@ function fetchArticles(cat){
         request.open('POST', '/getArticles', true);
         request.setRequestHeader('Content-Type', 'application/json');
 
-        request.send(JSON.stringify({cat:cat}));     
+        request.send(JSON.stringify({category:cat}));     
 }
 
 
