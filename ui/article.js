@@ -4,6 +4,7 @@ console.log("loaded article.js");
 
 
 function fetchArticles(cat){
+    var i=0;
       var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -16,14 +17,14 @@ function fetchArticles(cat){
             if (request.status === 200) {
                  var data = JSON.parse(this.responseText); 
               //   for (var i=0; i< data.length; i++) {
-               heading.innerHTML=`<h1>${data[1].heading}</h1>`;
-               category.innerHTML=`${data[1].category}`;
-               var aut=`${data[1].author_id}`;
+               heading.innerHTML=`<h1>${data[i].heading}</h1>`;
+               category.innerHTML=`${data[i].category}`;
+               var aut=`${data[i].author_id}`;
                getAuthor(aut);
-               var id= `${data[1].id}`;
+               var id= `${data[i].id}`;
                getTags(id);
-               content.innerHTML=`${data[1].content}`;
-               time.innerHTML=`${data[1].time.split('T')[0]}`;
+               content.innerHTML=`${data[i].content}`;
+               time.innerHTML=`${data[i].time.split('T')[0]}`;
             //     }
                 }
                
