@@ -183,6 +183,7 @@ app.post('/getTags',function(req,res){
     pool.query("select tag from article_tags where article_id=$1",[id],function(err,result){
      res.send(JSON.stringify(result.rows));
 });
+});
 
 app.post('/getAuthor',function(req,res){
     var ai=req.body.author_id;
