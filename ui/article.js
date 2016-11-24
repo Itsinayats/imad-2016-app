@@ -2,9 +2,9 @@ console.log("loaded article.js");
 
 
 
-
+ var k=0;
 function fetchArticles(cat){
-    var i=0;
+   
       var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -16,16 +16,16 @@ function fetchArticles(cat){
             var time  = document.getElementById('time');
             if (request.status === 200) {
                  var data = JSON.parse(this.responseText); 
-              //   for (var i=0; i< data.length; i++) {
-               heading.innerHTML=`<h1>${data[i].heading}</h1>`;
-               category.innerHTML=`${data[i].category}`;
-               var aut=`${data[i].author_id}`;
+                 
+               heading.innerHTML=`<h1>${data[k].heading}</h1>`;
+               category.innerHTML=`${data[k].category}`;
+               var aut=`${data[k].author_id}`;
                getAuthor(aut);
-               var id= `${data[i].id}`;
+               var id= `${data[k].id}`;
                getTags(id);
-               content.innerHTML=`${data[i].content}`;
-               time.innerHTML=`${data[i].time.split('T')[0]}`;
-            //     }
+               content.innerHTML=`${data[k].content}`;
+               time.innerHTML=`${data[k].time.split('T')[0]}`;
+           
                 }
                
              else {
