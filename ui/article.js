@@ -13,7 +13,7 @@ catbtn.onclick=function () {
                 var CategoryList = JSON.parse(this.responseText);                                      
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <li class="list-group-item"><a id="${CategoryList[i].name}" onclick="countCat(this.id)" href="#" >${CategoryList[i].name}</a><span id="badge" class="badge"></span></li>
+                     <li class="list-group-item"><a id="${CategoryList[i].name}" onclick="countCat(this.id)" href="#" >${CategoryList[i].name}</a><span id="badge" class="badge${i}"></span></li>
                    `;
                 }
                 content += "</ul>";
@@ -38,7 +38,7 @@ function countCat(cat) {
             if (request.status === 200) {
                 var articleData = JSON.parse(this.responseText);
                 for(var i=0;i<articleData.length;i++){
-                  badge.innerHTML=articleData[0].count; 
+                  badge1.innerHTML=articleData[0].count; 
                 }
              
             } else {
