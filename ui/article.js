@@ -39,12 +39,12 @@ function fetchArticles(cat){
                      <span class="label label-primary" id="category">${data[k].category}</span>
                     </h4>
                      <h5>
-                          <span id="author">${a}</span>
+                          <span id="author">...</span>
                           <span id="time">${data[k].time.split('T')[0]}</span>
                      </h5>
           
                       <h5>
-                         <span id="tags">${t}</span>
+                         <span id="tags">...</span>
                      </h5>
        <br>
       <div id="content">
