@@ -94,7 +94,7 @@ function getTags(id){
 }
 
 var next=document.getElementById('next');
-next.onclick=k=k=1;
+next.onclick=k++;
 
 
 
