@@ -30,7 +30,7 @@ function fetchArticles(cat){
         
                      pane+=`<div class='container'><div class='row'></div><div class="col-sm-9">
                     <div class="row text-center">
-                     <h4><small>LATEST POST</small></h4>
+                    
                      </div>
                              <hr>
                                         <h1 id="heading">${data[k].heading}</h1>                      
