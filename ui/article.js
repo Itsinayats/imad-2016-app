@@ -13,7 +13,7 @@ catbtn.onclick=function () {
                 var CategoryList = JSON.parse(this.responseText);                                      
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <li class="list-group-item"><a id="category-list" onclick="getArticles(this.id)" href="#" >${CategoryList[i].category}</a><span class="badge">${CategoryList[i].count}</span></li>
+                     <li class="list-group-item"><a id="${CategoryList[i].category}" onclick="countCat(this.id)" href="#" >${CategoryList[i].category}</a><span id="badge" class="badge"></span></li>
                    `;
                 }
                 content += "</ul>";
@@ -29,18 +29,42 @@ catbtn.onclick=function () {
  
 };
 
+function countCat(cat) {
+    var badge=document.getElementById('badge');
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+             var content  = document.getElementById('content');
+            if (request.status === 200) {
+                var articleData = JSON.parse(this.responseText);
+                for(var i=0;i<articleData.length;i++){
+                  badge.innerHTML=articleData[0].count; 
+                }
+             
+            } else {
+             content.innerHTML=`<b>Error Fetching Content</b>`;
+            }
+        }
+    };
+    
+    request.open('GET', '/get-cat-count', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({cat:cat})); 
+};
 
 
 
 
+
+           
+//load initially latest article
+            function loadBlogData(articleData,i) {
             var heading = document.getElementById('heading');
             var category = document.getElementById('category');
             var author = document.getElementById('author');
             var tags  = document.getElementById('tags');
             var content  = document.getElementById('content');
             var time  = document.getElementById('time');
-//load initially latest article
-              function loadBlogData(articleData,i) {
               heading.innerHTML=`<h1>${articleData[i].heading}</h1>`;
                category.innerHTML=`${articleData[i].category}`;
                author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${articleData[i].name}</b>`;   
