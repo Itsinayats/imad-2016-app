@@ -51,7 +51,7 @@ catbtn.onclick=function () {
                 var CategoryList = JSON.parse(this.responseText); 
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                   <li>  <button class="btn btn-warning" id="${CategoryList[i].name}" name="${CategoryList[i].name}" onclick="fetchArticles(this.name)">${CategoryList[i].name}</button></li>
+                   <li class="list-group-item">  <button class="btn btn-warning" id="${CategoryList[i].name}" name="${CategoryList[i].name}" onclick="fetchArticles(this.name)">${CategoryList[i].name}</button></li>
                    `;
                 }
                 content+="</ul>";
