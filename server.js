@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 var morgan = require('morgan');
 app.use(morgan('combined'));
 
@@ -184,12 +186,29 @@ app.get('/get-categories', function (req, res) {
    });
 });
 
-//couting articles under category
-app.get('/count-articles',function(req,res){
- 
+
+
+var category = req.body.category;
+//fetching whole article related to category
+app.get('/get-articles',function(req,res){
+    pool.query("select article_tags.tag,articles.title,articles.content,articles.category,articles.heading,articles.time,users.name FROM articles,article_tags,users where articles.category=$1",[category],function(err,result){
+         if(err){
+          res.status(500).send(err.toString()) ;
+          }
+     else{
+            if(result.rows.length===0)
+             {
+                res.status(400).send('ARTICLE NOT FOUND');
+             }
+                 else{
+                   res.send(JSON.stringify(result.rows));
+                     
+                 }
+             }
+        
+    });
+    
 });
-
-
 
 
 
