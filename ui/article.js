@@ -9,14 +9,14 @@ catbtn.onclick=function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var categories = document.getElementById('categories');
             if (request.status === 200) {
-                var content =  "<button><ul class='list-group' style='width:300px'>";
+                var content =  "";
                 var CategoryList = JSON.parse(this.responseText);                                      
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <li class="list-group-item"><a id="${CategoryList[i].name}" onclick="countCat(this.id)" href="#" >${CategoryList[i].name}</a><span id="badge" class="badge"></span></li>
+                     <button id="btn${i}" onclick="countCat(this.id)"></button></a><span id="badge" class="badge"></span></li>
                    `;
                 }
-                content += "</ul></button>";
+                content += "</ul>";
                 categories.innerHTML = content;
             } else {
                 categories.innerHTML('Oops! Could not load all articles!');
