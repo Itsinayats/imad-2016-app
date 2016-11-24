@@ -2,7 +2,7 @@ console.log("loaded article.js");
 
 function getArticles(cat){
 alert(cat);
-  /*     var request = new XMLHttpRequest();
+      var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var heading = document.getElementById('heading');
@@ -33,7 +33,7 @@ alert(cat);
         request.open('POST', '/getArticles', true);
         request.setRequestHeader('Content-Type', 'application/json');
 
-        request.send(JSON.stringify({cat:cat}));       */   
+        request.send(JSON.stringify({cat:cat}));     
 }
 
 
