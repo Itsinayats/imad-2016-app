@@ -9,14 +9,14 @@ catbtn.onclick=function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var categories = document.getElementById('categories');
             if (request.status === 200) {
-                var content =  "<ul class='list-group' style='width:300px'>";
+                var content =  "<button><ul class='list-group' style='width:300px'>";
                 var CategoryList = JSON.parse(this.responseText);                                      
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <li class="list-group-item"><a id="${CategoryList[i].name}" onclick="countCat(this.id)" href="#" >${CategoryList[i].name}</a><span id="badge" class="badge${i}"></span></li>
+                     <li class="list-group-item"><a id="${CategoryList[i].name}" onclick="countCat(this.id)" href="#" >${CategoryList[i].name}</a><span id="badge" class="badge"></span></li>
                    `;
                 }
-                content += "</ul>";
+                content += "</ul></button>";
                 categories.innerHTML = content;
             } else {
                 categories.innerHTML('Oops! Could not load all articles!');
@@ -29,6 +29,10 @@ catbtn.onclick=function () {
  
 };
 
+
+
+
+/*
 function countCat(cat) {
     var badge=document.getElementById('badge');
     var request = new XMLHttpRequest();
@@ -52,7 +56,7 @@ function countCat(cat) {
         request.send(JSON.stringify({cat:cat})); 
 };
 
-
+*/
 
 
 
