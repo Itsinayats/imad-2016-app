@@ -1,7 +1,7 @@
 console.log("loaded article.js");
 
 
-
+//fetch articles
  var k=1;
 function fetchArticles(cat){
    
@@ -42,8 +42,7 @@ function fetchArticles(cat){
 }
 
 
-
-
+//getUthor name
 function getAuthor(author_id){
      var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
@@ -66,7 +65,7 @@ function getAuthor(author_id){
 }
 
 
-
+//get tags
 function getTags(id){
     var request = new XMLHttpRequest();
         
@@ -94,16 +93,8 @@ function getTags(id){
     
 }
 
-
-
-
-
-
-
-
-
-
-
+var next=document.getElementById('next');
+next.onclick=k=k=1;
 
 
 
