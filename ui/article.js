@@ -1,4 +1,14 @@
 console.log("loaded article.js");
+getAuthor(author_id){
+  return "goooooooooooooo"  ;
+}
+getTags(id){
+    return "jnjnjnjnjnj";
+    
+    
+}
+
+
 
 function fetchArticles(cat){
       var request = new XMLHttpRequest();
