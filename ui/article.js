@@ -54,8 +54,9 @@ catbtn.onclick=function () {
                     content += `
                      <li class="list-group-item"><a id="${CategoryList[i].name}" onclick="getArticles(this.id)" href="#" >${CategoryList[i].name}</a><span id="badge" class="badge"></span></li>
                    `;
-                    content += "</ul>";
+                
                 }
+                    content += "</ul>";
                  categories.innerHTML = content;
                 }
               
