@@ -205,7 +205,7 @@ app.post('/getTags',function(req,res){
 
 
 
-
+//get author
 app.post('/getAuthor',function(req,res){
     var ai=req.body.author_id;
     pool.query("select name from users where id=$1",[ai],function(err,result){
@@ -219,16 +219,12 @@ app.post('/getAuthor',function(req,res){
              }
                  else{
                    res.send(JSON.stringify(result.rows));
-                     
-                 }
+                     }
              }
         
     });
     
 });
-
-
-
 
 
 
