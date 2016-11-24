@@ -51,7 +51,8 @@ function getAuthor(author_id){
         
               if (request.status === 200) {
                   var data = JSON.parse(this.responseText); 
-                  return `<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].email}</b>`;
+                 // return `<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].email}</b>`;
+                  author.innerHTML="CCCCCCC";
               } else {
                   
               }
