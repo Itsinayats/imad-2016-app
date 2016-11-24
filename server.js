@@ -177,7 +177,7 @@ pool.query("select article_tags.tag,articles.title,articles.content,articles.cat
 
 //getting categories
 app.get('/get-categories', function (req, res) {
-   pool.query('select * from category category', function (err, result) {
+   pool.query('select * from category', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
