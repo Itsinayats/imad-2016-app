@@ -13,7 +13,7 @@ catbtn.onclick=function () {
                 var CategoryList = JSON.parse(this.responseText);                                      
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <button id="${CategoryList[i].name}" name="${CategoryList[i].name}">${CategoryList[i].name}</button><span id="badge" class="badge">5</span>
+                     <button class="btn btn-alert"id="${CategoryList[i].name}" name="${CategoryList[i].name}">${CategoryList[i].name}</button><span id="btn${i}" class="badge">5</span>
                    `;
                 }
                 categories.innerHTML = content;
@@ -29,9 +29,6 @@ catbtn.onclick=function () {
 };
 
 
-
-
-/*
 function countCat(cat) {
     var badge=document.getElementById('badge');
     var request = new XMLHttpRequest();
@@ -55,7 +52,6 @@ function countCat(cat) {
         request.send(JSON.stringify({cat:cat})); 
 };
 
-*/
 
 
 
