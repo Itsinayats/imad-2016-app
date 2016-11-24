@@ -43,6 +43,7 @@ function fetchArticles(cat){
 
 
 
+
 function getAuthor(author_id){
      var request = new XMLHttpRequest();
         
@@ -52,7 +53,7 @@ function getAuthor(author_id){
         
               if (request.status === 200) {
                   var data = JSON.parse(this.responseText); 
-                  return `<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].name}</b>`;
+                  return `<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].id}</b>`;
               } else {
                   
               }
@@ -65,6 +66,8 @@ function getAuthor(author_id){
     request.send(JSON.stringify({author_id:author_id}));     
   
 }
+
+
 
 function getTags(id){
     var request = new XMLHttpRequest();
