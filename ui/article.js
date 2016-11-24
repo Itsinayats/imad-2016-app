@@ -27,8 +27,7 @@ function fetchArticles(cat){
                  for(var k=0;k<data.length;k++){
                        var aut=`${data[k].author_id}`;
                      var id= `${data[k].id}`;
-         getTags(id);
-         getAuthor(aut);
+        
                      pane+=`<div class='container'><div class='row'> <div class="col-sm-9">
                     <div class="row text-center">
                      <h4><small>LATEST POST</small></h4>
@@ -107,8 +106,10 @@ function fetchArticles(cat){
  </div>
 </div></div>
 `;
-
+         
          document.getElementById('articlePane').innerHTML=pane;
+         getTags(id);
+         getAuthor(aut);
                  }
                 }
                
