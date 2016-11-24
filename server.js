@@ -223,6 +223,47 @@ app.post('/getArticles',function(req,res){
     
 });
 
+app.post('/getTags',function(req,res){
+    var id=req.body.id;
+    pool.query("select tag from article_tags where article_id=$1",[id],function(err,result){
+         if(err){
+          res.status(500).send(err.toString()) ;
+          }
+     else{
+            if(result.rows.length===0)
+             {
+                res.status(400).send('ARTICLE NOT FOUND');
+             }
+                 else{
+                   res.send(JSON.stringify(result.rows));
+                     
+                 }
+             }
+        
+    });
+    
+});
+
+app.post('/getAuthor',function(req,res){
+    var ai=req.body.author_id;
+    pool.query("select name from users where id=$1",[ai],function(err,result){
+         if(err){
+          res.status(500).send(err.toString()) ;
+          }
+     else{
+            if(result.rows.length===0)
+             {
+                res.status(400).send('ARTICLE NOT FOUND');
+             }
+                 else{
+                   res.send(JSON.stringify(result.rows));
+                     
+                 }
+             }
+        
+    });
+    
+});
 
 
 
