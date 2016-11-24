@@ -22,11 +22,12 @@ function fetchArticles(cat){
             if (request.status === 200) {
                  var data = JSON.parse(this.responseText);
                   var aut=`${data[k].author_id}`;
-  var id= `${data[k].id}`;
-         getTags(id);
-         getAuthor(aut);
+  
                  var pane='';
                  for(var k=0;k<data.length;k++){
+                     var id= `${data[k].id}`;
+         getTags(id);
+         getAuthor(aut);
                      pane+=` <div class="col-sm-9">
                     <div class="row text-center">
                      <h4><small>LATEST POST</small></h4>
