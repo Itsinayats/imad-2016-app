@@ -1,33 +1,5 @@
 console.log("loaded article.js");
 
-
-//load categories
-var catbtn=document.getElementById('catbtn');
-catbtn.onclick=function () {
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            var categories = document.getElementById('categories');
-            if (request.status === 200) {
-                var content ="";
-                var CategoryList = JSON.parse(this.responseText); 
-                for (var i=0; i< CategoryList.length; i++) {
-                    content += `
-                     <button class="btn btn-info" id="${CategoryList[i].name}" name="${CategoryList[i].name} onclick="getArticles(this.name)">${CategoryList[i].name}</button>
-                   `;
-                }
-                categories.innerHTML = content;
-            } else {
-                categories.innerHTML('Oops! Could not load all articles!');
-            }
-        }
-    };
-    
-    request.open('GET', "/get-categories", true);
-    request.send();
- 
-};
-
 function getArticles(cat){
 alert(cat);
   /*     var request = new XMLHttpRequest();
@@ -63,6 +35,47 @@ alert(cat);
 
         request.send(JSON.stringify({cat:cat}));       */   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//load categories
+var catbtn=document.getElementById('catbtn');
+catbtn.onclick=function () {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            var categories = document.getElementById('categories');
+            if (request.status === 200) {
+                var content ="";
+                var CategoryList = JSON.parse(this.responseText); 
+                for (var i=0; i< CategoryList.length; i++) {
+                    content += `
+                     <button class="btn btn-info" id="${CategoryList[i].name}" name="${CategoryList[i].name} onclick="getArticles(this.name)">${CategoryList[i].name}</button>
+                   `;
+                }
+                categories.innerHTML = content;
+            } else {
+                categories.innerHTML('Oops! Could not load all articles!');
+            }
+        }
+    };
+    
+    request.open('GET', "/get-categories", true);
+    request.send();
+ 
+};
+
+
 
 
 
