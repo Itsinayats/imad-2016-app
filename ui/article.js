@@ -52,7 +52,7 @@ function fetchArticles(cat){
        </div>
        
       <hr>
-<span id="leavecomment">  <h4>Please Login First To Leave a Comment!!</h4>
+<span id="leavecomment">  <h4>Comments...</h4>
   <!-- 
       <form role="form">
         <div class="form-group">
