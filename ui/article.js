@@ -58,8 +58,9 @@ catbtn.onclick=function () {
 
 
 //Load All articles On click of category
+var c = document.getElementById('category-list');
 var category = document.getElementById('category-list').innerHTML;                  //e to set
-function getArticles (category) {
+c.onclick=function getArticles (category) {
        var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
@@ -84,7 +85,7 @@ function getArticles (category) {
                  categories.innerHTML('Oops! Could not load all articles!');
               }
           };
-        }
+        };
         
         // Make the request
         var username = document.getElementById('username').value;
