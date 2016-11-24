@@ -23,7 +23,7 @@ function fetchArticles(cat){
                 }
                
              else {
-            alert("article not found!!!");
+            alert("Sorry No!articles In this category!!!");
                
             }
         }
