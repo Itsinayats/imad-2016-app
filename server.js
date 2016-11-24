@@ -188,9 +188,10 @@ app.get('/get-categories', function (req, res) {
 
 
 
-var category = req.body.category;
+
 //fetching whole article related to category
 app.get('/get-articles',function(req,res){
+    var category = req.body.category;
     pool.query("select article_tags.tag,articles.title,articles.content,articles.category,articles.heading,articles.time,users.name FROM articles,article_tags,users where articles.category=$1",[category],function(err,result){
          if(err){
           res.status(500).send(err.toString()) ;
