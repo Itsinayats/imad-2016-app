@@ -39,7 +39,6 @@ function fetchArticles(cat){
 
 
 
-
 //load categories
 var catbtn=document.getElementById('catbtn');
 catbtn.onclick=function () {
@@ -48,29 +47,24 @@ catbtn.onclick=function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var categories = document.getElementById('categories');
             if (request.status === 200) {
-                var content =  "<ul class='list-group' style='width:300px'>";
-                var CategoryList = JSON.parse(this.responseText);                                      
-           /*     for (var i=0; i< CategoryList.length; i++) {
+                var content ="";
+                var CategoryList = JSON.parse(this.responseText); 
+                for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <li class="list-group-item"><a id="${CategoryList[i].name}" onclick="getArticles(this.id)" href="#" >${CategoryList[i].name}</a><span id="badge" class="badge"></span></li>
+                     <button class="btn btn-warning" id="${CategoryList[i].name}" name="${CategoryList[i].name}" onclick="fetchArticles(this.name)">${CategoryList[i].name}</button>
                    `;
-                
                 }
-                    content += "</ul>";
-                */ categories.innerHTML = content;
-                }
-              
-             else {
+                categories.innerHTML = content;
+            } else {
                 categories.innerHTML('Oops! Could not load all articles!');
             }
         }
+    };
     
     request.open('GET', "/get-categories", true);
     request.send();
- };
-
+ 
 };
-
 
 
 
