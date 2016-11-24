@@ -45,6 +45,7 @@ function fetchArticles(cat){
 
 
 function getAuthor(author_id){
+    alert(author_id);
      var request = new XMLHttpRequest();
         
        
