@@ -21,7 +21,7 @@ function fetchArticles(cat){
              //  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[i].name}</b>`;
             
                author.innerHTML=getAuthor('${data[i].author_id}');
-               console.log('${data[i].id}');
+              alert('${data[i].id}');
                tags.innerHTML=getTags('${data[i].id}');
                content.innerHTML=`${data[i].content}`;
                time.innerHTML=`${data[i].time.split('T')[0]}`;
