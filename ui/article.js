@@ -20,9 +20,10 @@ function fetchArticles(cat){
             var content  = document.getElementById('content');
             var time  = document.getElementById('time');
             if (request.status === 200) {
-                 var data = JSON.parse(this.responseText); 
+                 var data = JSON.parse(this.responseText);
+                 var pane='';
                  for(var k=0;k<data.length;k++){
-                     var pane=` <div class="col-sm-9">
+                     pane+=` <div class="col-sm-9">
                     <div class="row text-center">
                      <h4><small>LATEST POST</small></h4>
                      </div>
