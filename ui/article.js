@@ -1,9 +1,50 @@
 console.log("loaded article.js");
 function getAuthor(author_id){
-  return "goooooooooooooo"  ;
+     var request = new XMLHttpRequest();
+        
+       
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+        
+              if (request.status === 200) {
+                  var data = JSON.parse(this.responseText); 
+                  return `<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].name}</b>`;
+              } else {
+                  
+              }
+          }
+        };
+    
+    
+    request.open('POST', '/getAuthor', true);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify({author_id:author_id}));     
+  
 }
+
 function getTags(id){
-    return "jnjnjnjnjnj";
+    var request = new XMLHttpRequest();
+        
+       
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+        
+              if (request.status === 200) {
+                  var data = JSON.parse(this.responseText); 
+                  var x="";
+               for(var j=0;j<data.length;j++){
+                   x+=`<span class="label label-success">${data[j].tag}</span>&nbsp;`;
+               }
+               tags.innerHTML=x;
+              } else {
+                 
+              }
+          }
+        };
+    
+     request.open('POST', '/getTags', true);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify({id:id}));  
     
     
 }
