@@ -21,10 +21,11 @@ function fetchArticles(cat){
             var time  = document.getElementById('time');
             if (request.status === 200) {
                  var data = JSON.parse(this.responseText);
-                  var aut=`${data[k].author_id}`;
+                
   
                  var pane='';
                  for(var k=0;k<data.length;k++){
+                       var aut=`${data[k].author_id}`;
                      var id= `${data[k].id}`;
          getTags(id);
          getAuthor(aut);
