@@ -27,6 +27,8 @@ function fetchArticles(cat){
                  for(var k=0;k<data.length;k++){
                        var aut=`${data[k].author_id}`;
                      var id= `${data[k].id}`;
+          var t=            getTags(id);
+        var a= getAuthor(aut);
         
                      pane+=`<div class='container'><div class='row'><div class="col-sm-9">
                     <div class="row text-center">
@@ -38,12 +40,12 @@ function fetchArticles(cat){
                      <span class="label label-primary" id="category">${data[k].category}</span>
                     </h4>
                      <h5>
-                          <span id="author">...</span>
+                          <span id="author">${a}</span>
                           <span id="time">${data[k].time.split('T')[0]}</span>
                      </h5>
           
                       <h5>
-                         <span id="tags">...</span>
+                         <span id="tags">${t}</span>
                      </h5>
        <br>
       <div id="content">
@@ -105,8 +107,7 @@ function fetchArticles(cat){
 `;
          
          document.getElementById('articlePane').innerHTML=pane;
-         getTags(id);
-         getAuthor(aut);
+        
                  }
                 }
                
@@ -132,7 +133,7 @@ function getAuthor(author_id){
         
               if (request.status === 200) {
                   var data = JSON.parse(this.responseText);
-                  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].name}</b>`;
+                  return `<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[0].name}</b>`;
               } else {
                   
               }
@@ -161,7 +162,7 @@ function getTags(id){
                for(var j=0;j<data.length;j++){
                    x+=`<span class="label label-success">${data[j].tag}</span>&nbsp;`;
                }
-               tags.innerHTML=x;
+               return x;
               } else {
                  
               }
