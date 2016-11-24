@@ -29,7 +29,7 @@ catbtn.onclick=function () {
 };
 
 function getArticles(cat){
-    console.log(cat);
+alert(cat);
   /*     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
