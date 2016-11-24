@@ -45,7 +45,7 @@ function fetchArticles(cat){
                       <h5>
                          <span id="tags">...</span>
                      </h5>
-       <br><hr>
+       <br>
       <div id="content">
                 <p><strong>${data[k].content}</strong><p></div>
     
