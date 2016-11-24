@@ -28,7 +28,7 @@ function fetchArticles(cat){
                        var aut=`${data[k].author_id}`;
                      var id= `${data[k].id}`;
         
-                     pane+=`<div class='container'><div class='row'> <div class='col-sm-3'></div><div class="col-sm-9">
+                     pane+=`<div class='container'><div class='row'></div><div class="col-sm-9">
                     <div class="row text-center">
                      <h4><small>LATEST POST</small></h4>
                      </div>
@@ -50,10 +50,7 @@ function fetchArticles(cat){
                 <p><strong>${data[k].content}</strong><p></div>
     
        </div>
-                  <ul class="pager">
-                        <li><a id="previous" href="#">Previous</a></li>
-                        <li><a id="next" href="#">Next</a></li>
-                  </ul>
+       
       <hr>
 <span id="leavecomment">  <h4>Please Login First To Leave a Comment!!</h4>
   <!-- 
