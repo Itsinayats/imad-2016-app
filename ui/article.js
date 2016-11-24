@@ -14,7 +14,7 @@ function fetchArticles(cat){
                  var data = JSON.parse(this.responseText); 
                  for (var i=0; i< data.length; i++) {
                 
-               heading.innerHTML=`<h1>${data[i].heading}</h1>`;
+               heading.innerHTML=`<h1>${data[i].id}</h1>`;
                category.innerHTML=`${data[i].category}`;
              //  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[i].name}</b>`;   
                content.innerHTML=`${data[i].content}`;
