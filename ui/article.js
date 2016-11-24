@@ -19,11 +19,10 @@ function fetchArticles(cat){
                heading.innerHTML=`<h1>${data[i].heading}</h1>`;
                category.innerHTML=`${data[i].category}`;
              //  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[i].name}</b>`;
-            
+            var aut=`${data[i].author_id}`;
                author.innerHTML=getAuthor('${data[i].author_id}');
                var id= `${data[i].id}`;
-              alert(id);
-               tags.innerHTML=getTags('${data[i].id}');
+               tags.innerHTML=getTags(id);
                content.innerHTML=`${data[i].content}`;
                time.innerHTML=`${data[i].time.split('T')[0]}`;
                  }
