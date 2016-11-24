@@ -201,7 +201,27 @@ app.get('/get-cat-count', function (req, res) {
 });
 
 
-
+//getting articles
+app.get('/getArticles',function(req,res){
+    var cat=req.body.cat;
+    pool.query("select *from articles where category=$1",[cat],function(err,result){
+         if(err){
+          res.status(500).send(err.toString()) ;
+          }
+     else{
+            if(result.rows.length===0)
+             {
+                res.status(400).send('ARTICLE NOT FOUND');
+             }
+                 else{
+                   res.send(JSON.stringify(result.rows));
+                     
+                 }
+             }
+        
+    });
+    
+});
 
 
 
