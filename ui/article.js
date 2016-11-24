@@ -13,7 +13,7 @@ catbtn.onclick=function () {
                 var CategoryList = JSON.parse(this.responseText);                                      
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
-                     <button id="${categoryList[i].name}" name="${categoryList[i].name}">${categoryList[i].name}</button><span id="badge" class="badge"></span>
+                     <button id="${CategoryList[i].name}" name="${CategoryList[i].name}">${CategoryList[i].name}</button><span id="badge" class="badge"></span>
                    `;
                 }
                 categories.innerHTML = content;
