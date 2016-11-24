@@ -1,8 +1,13 @@
 console.log("loaded article.js");
 
 
+    
+
+    
+
+
 //fetch articles
- var k=0;
+
 function fetchArticles(cat){
    
       var request = new XMLHttpRequest();
@@ -16,16 +21,90 @@ function fetchArticles(cat){
             var time  = document.getElementById('time');
             if (request.status === 200) {
                  var data = JSON.parse(this.responseText); 
-                 
-               heading.innerHTML=`<h1>${data[k].heading}</h1>`;
-               category.innerHTML=`${data[k].category}`;
-               var aut=`${data[k].author_id}`;
-               getAuthor(aut);
-               var id= `${data[k].id}`;
-               getTags(id);
-               content.innerHTML=`${data[k].content}`;
-               time.innerHTML=`${data[k].time.split('T')[0]}`;
-           
+                 for(var k=0;k<data.length;k++){
+                     var pane=` <div class="col-sm-9">
+                    <div class="row text-center">
+                     <h4><small>LATEST POST</small></h4>
+                     </div>
+                             <hr>
+                                        <h1 id="heading">${data[k].heading}</h1>                      
+                     <h4>
+                     <span class="label label-primary" id="category">${data[k].category}</span>
+                    </h4>
+                     <h5>
+                          <span id="author">...</span>
+                          <span id="time">${data[k].time.split('T')[0]}</span>
+                     </h5>
+          
+                      <h5>
+                         <span id="tags">...</span>
+                     </h5>
+       <br><hr>
+      <div id="content">
+                 <div class="col-sm-12 text-center"> <img src="/ui/images/spinner.gif" width="100px" height="100px"><p><strong>${data[k].content}</strong><p></div>
+    
+       </div>
+                  <ul class="pager">
+                        <li><a id="previous" href="#">Previous</a></li>
+                        <li><a id="next" href="#">Next</a></li>
+                  </ul>
+      <hr>
+<span id="leavecomment">  <h4>Please Login First To Leave a Comment!!</h4>
+  <!-- 
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge" id="total-comments">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+              <p>Me too! WOW!</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+-->
+</span>
+ 
+</div>
+`;
+ var aut=`${data[k].author_id}`;
+  var id= `${data[k].id}`;
+         getTags(id);
+         getAuthor(aut);
+                 }
                 }
                
              else {
