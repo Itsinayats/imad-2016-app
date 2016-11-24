@@ -105,6 +105,7 @@ function fetchArticles(cat){
   var id= `${data[k].id}`;
          getTags(id);
          getAuthor(aut);
+         document.getElementById('articlePane').innerHTML=pane;
                  }
                 }
                
