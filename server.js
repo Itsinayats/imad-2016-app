@@ -184,7 +184,7 @@ app.post('/getArticles',function(req,res){
 //getting Tags
 app.post('/getTags',function(req,res){
     var id=req.body.id;
-    pool.query("select *from articles where category=$1",[id],function(err,result){
+    pool.query("select *from article_tags where article_id=$1",[id],function(err,result){
          if(err){
           res.status(500).send(err.toString()) ;
           }
