@@ -20,7 +20,7 @@ function fetchArticles(cat){
                category.innerHTML=`${data[i].category}`;
              //  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[i].name}</b>`;
             var aut=`${data[i].author_id}`;
-               author.innerHTML=getAuthor('${data[i].author_id}');
+               author.innerHTML=getAuthor(aut);
                var id= `${data[i].id}`;
                tags.innerHTML=getTags(id);
                content.innerHTML=`${data[i].content}`;
