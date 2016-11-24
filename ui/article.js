@@ -2,7 +2,7 @@ console.log("loaded article.js");
 
 
 //fetch articles
- var k=1;
+ var k=0;
 function fetchArticles(cat){
    
       var request = new XMLHttpRequest();
