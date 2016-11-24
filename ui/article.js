@@ -47,13 +47,14 @@ catbtn.onclick=function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var categories = document.getElementById('categories');
             if (request.status === 200) {
-                var content ="";
+                var content ="<ul class='list-group' style='width:300px'>";
                 var CategoryList = JSON.parse(this.responseText); 
                 for (var i=0; i< CategoryList.length; i++) {
                     content += `
                      <button class="btn btn-warning" id="${CategoryList[i].name}" name="${CategoryList[i].name}" onclick="fetchArticles(this.name)">${CategoryList[i].name}</button>
                    `;
                 }
+                content+="</ul>";
                 categories.innerHTML = content;
             } else {
                 categories.innerHTML('Oops! Could not load all articles!');
