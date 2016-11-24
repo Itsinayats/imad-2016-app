@@ -142,38 +142,6 @@ res.sendFile(path.join(__dirname, 'ui/images' , 'gl.jpg'));
 });
 
 
-/*
-
-//app.get('/blog', function (req, res) {
-app.get('/articles/:articleName', function (req, res) {
-// var articleName=req.params.articleName;
-//pool.query("Select * from articles,users where title='" + req.params.articleName + "'", function(err,result){
-pool.query("select article_tags.tag,articles.title,articles.content,articles.category,articles.heading, articles,date,users.name from articles,article_tags,users where article_tags.article_id=articles.id AND articles.title='"+ req.params.articleName +"' AND articles.author_id=users.id  order by time DESC",function(err,result){
-    
-
-    
-    
-    if(err){
-          res.status(500).send(err.toString()) ;
-          }
-     else{
-            if(result.rows.length===0)
-             {
-                res.status(400).send('ARTICLE NOT FOUND');
-             }
-                 else{
-                
-                 res.send(JSON.stringify(result.rows));
-                     
-                 }
-             }
-    
-});
-});
- 
-
-*/
-
 
 //getting categories
 app.get('/get-categories', function (req, res) {
@@ -186,19 +154,6 @@ app.get('/get-categories', function (req, res) {
    });
 });
 
-
-//getting count for category
-
-app.get('/get-cat-count', function (req, res) {
- var cat=req.body.cat;
-   pool.query('SELECT COUNT(category) FROM articles WHERE category=$1;',[cat], function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send(JSON.stringify(result.rows));
-      }
-   });
-});
 
 
 //getting articles
