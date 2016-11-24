@@ -13,10 +13,12 @@ function fetchArticles(cat){
             if (request.status === 200) {
                  var data = JSON.parse(this.responseText); 
                  for (var i=0; i< data.length; i++) {
-                
                heading.innerHTML=`<h1>${data[i].heading}</h1>`;
                category.innerHTML=`${data[i].category}`;
-             //  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[i].name}</b>`;   
+             //  author.innerHTML=`<span class="glyphicon glyphicon-time"></span> Post By, <b>${data[i].name}</b>`;
+            
+               author.innerHTML=getAuthor('${data[i].author_id}');
+               tags.innerHTML=getTags('${data[i].id}');
                content.innerHTML=`${data[i].content}`;
                time.innerHTML=`${data[i].time.split('T')[0]}`;
                  }
