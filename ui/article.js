@@ -259,4 +259,10 @@ window.onload=function() {
 };
 
 
+$(document).ajaxStop(function () {
+        $('#articlePane').hide();
+    });
 
+    $(document).ajaxStart(function () {
+        $('#articlePane').show();
+    });
