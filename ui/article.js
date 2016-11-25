@@ -285,13 +285,16 @@ window.onload=function() {
         };
         
         // Make the request
-        var username = document.getElementById('username').value;
+        
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        console.log(username);
+        console.log(name);
+        console.log(email);
         console.log(password);
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
+        request.send(JSON.stringify({name:name,email:email, password: password}));  
         register.value = 'Registering...';
     
     };
