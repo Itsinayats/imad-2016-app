@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 var morgan = require('morgan');
 app.use(morgan('combined'));
-var crypto = require('crypto')
+var crypto = require('crypto');
 
 var http = require('http').Server(app);
 
