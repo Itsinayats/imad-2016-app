@@ -49,14 +49,6 @@ app.get('/test-db', function (req, res) {
 
 
 
-error:function(error){
-          if(error.responseText == 'show')
-              alert("Please enter correct user name and password.");
-}
-
-
-
-
 
 
 
