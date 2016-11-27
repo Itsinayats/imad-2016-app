@@ -282,6 +282,7 @@ window.onload=function() {
               }
               else if(request.status === 500){
                   alert('username/password/email cannot be blank!!!');
+                   register.value = 'Register';
               }
               else {
                   alert('Could not register the user');
