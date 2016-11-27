@@ -285,7 +285,7 @@ window.onload=function() {
         };
         
         // Make the request
-        var msgg=document.getElementById('msg');
+        var register = document.getElementById('register_btn');
         var name = document.register.name.value;
         var email = document.register.email.value;
         var password = document.register.password.value;
