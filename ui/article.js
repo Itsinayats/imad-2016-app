@@ -286,13 +286,10 @@ window.onload=function() {
         };
         
         // Make the request
-        var msg = document.getElementById('msg');
+     
         var name = document.register.name.value;
         var email = document.register.email.value;
         var password = document.register.password.value;
-        if((name== '')||(password== '')||(email== '')){
-            msg.innerHTML="name/email/password cannot be blank!!"
-        }
         console.log(name);
         console.log(email);
         console.log(password);
