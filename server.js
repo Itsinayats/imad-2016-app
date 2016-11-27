@@ -49,7 +49,10 @@ app.get('/test-db', function (req, res) {
 
 
 
-
+error:function(error){
+          if(error.responseText == 'show')
+              alert("Please enter correct user name and password.");
+}
 
 
 
@@ -292,7 +295,7 @@ app.post('/create-user', function (req, res) {
    var email= req.body.email;
    var password = req.body.password;
     if((name== '')||(password== '')||(email== '')){
-            alert("name/email/password cannot be blank!!");
+           res.send(500,'show') ;
         }
         else{
  
