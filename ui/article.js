@@ -286,9 +286,9 @@ window.onload=function() {
         
         // Make the request
         
-        var name = document.register.getElementById('name').value;
-        var email = document.register.getElementById('email').value;
-        var password = document.register.getElementById('password').value;
+        var name = document.register.name.value;
+        var email = document.register.email.value;
+        var password = document.register.password.value;
         console.log(name);
         console.log(email);
         console.log(password);
