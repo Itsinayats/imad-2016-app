@@ -1,8 +1,9 @@
 console.log("loaded article.js");
 
    //load register modal
-     var act  = document.getElementById('act');
-     function loadRegisterModel(){
+   
+     function loadRegisterModal(){
+           var act  = document.getElementById('act');
    var x=`      
   <div class="modal fade" id="registerModal" role="dialog">
          <div class="modal-dialog">
@@ -44,6 +45,7 @@ console.log("loaded article.js");
 
 //load login model
 function loadLoginModal(){
+    var act  = document.getElementById('act');
  
    var x=`<!-- LoginModal -->
   <div class="modal fade" id="loginModal" role="dialog">
