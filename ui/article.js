@@ -29,7 +29,7 @@ function fetchArticles(cat){
                      var id= `${data[k].id}`;
         
         
-                     pane+=`<div class='container'><div class='row'><div class="col-sm-9">
+                     pane+= `<div class='container'><div class='row'><div class="col-sm-9">
                     <div class="row text-center">
                     
                      </div>
