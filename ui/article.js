@@ -87,12 +87,12 @@ function loadLoginModal(){
 }
  
  document.getElementById('registerbtn').onclick=function(){
-     loadLoginModal();
+    
      $('#registerModal').modal('show');
      
  };
  document.getElementById('loginbtn').onclick=function(){
-     loadRegisterModal();
+   
      $('#loginModal').modal('show');
  };
     
@@ -332,6 +332,8 @@ catbtn.onclick=function () {
 
 //perform on windows start.
 window.onload=function() {
+      loadRegisterModal();
+      loadRegisterModal();
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
