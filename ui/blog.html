@@ -53,8 +53,8 @@ background:	#E6E6FA;
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li class="bold active"><a href="/">Blog</a></li>
-            <li><a href="#" class="bold" data-toggle="modal" data-target="#loginModal">Login</a></li>
-           <li><a href="#" class="bold" data-toggle="modal" data-target="#registerModal">Register</a></li>
+            <li><a href="#" class="bold" data-toggle="modal" data-target="#loginModal" id="loginbtn">Login</a></li>
+           <li><a href="#" class="bold" data-toggle="modal" data-target="#registerModal" id="registerbtn">Register</a></li>
            </ul>
            <div class="col-sm-3 col-md-3 pull-right">
             <form class="navbar-form" role="search">
@@ -163,81 +163,10 @@ background:	#E6E6FA;
 </div>
 </div>
 
+<div id="act"></div>
 
-  <!-- LoginModal -->
-  <div class="modal fade" id="loginModal" role="dialog">
-             <div class="modal-dialog">
-    
-
-      <!-- Modal content-->
-                        <div class="modal-content">
-                              <div class="modal-header">
-                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                         <h4 class="modal-title">Login</h4>
-                              </div>
-                                      <div class="modal-body">
-                                              <form>
-                                                  <div class="form-group">
-                                                           <label for="email">Email address:</label>
-                                                           <input type="email" class="form-control" id="email">
-                                                  </div>
-                                                  
-                                                   <div class="form-group">
-                                                         <label for="pwd">Password:</label>
-                                                        <input type="password" class="form-control" id="pwd">
-                                                   </div>
-                                                   
-                                                   <div class="checkbox">
-                                                   <label><input type="checkbox"> Remember me</label>
-                                                   </div>
-                                                   
-                                                  <button type="submit" class="btn btn-default">Submit</button>
-                                               </form>
-                                        </div>
-                                           <div class="modal-footer">
-                                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                           </div>
-                        </div>
-      
-              </div>
-  </div>
   
-     <!-- Register Modal -->
-  <div class="modal fade" id="registerModal" role="dialog">
-         <div class="modal-dialog">
-    
-                     <div class="modal-content">
-                         <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              <h4 class="modal-title">Register</h4>
-                         </div>
-                         <span id="msg" style="color:red"></span>
-                               <div class="modal-body">
-                                 <form name='register'>
-                                      <div class="form-group">
-                                               <label for="name">Full Name:</label>
-                                                   <input type="text" class="form-control" id="name">
-                                      </div>
-                                      <div class="form-group">
-                                               <label for="email">Email address:</label>
-                                                   <input type="email" class="form-control" id="email">
-                                      </div>
-                                      
-                                     <div class="form-group">
-                                             <label for="pwd">Password:</label>
-                                            <input type="password" class="form-control" id="password">
-                                     </div>
-                                     
-                                   <button type="button" class="btn btn-default" id="register_btn">Register</button>
-                               </form>
-                           </div>
-                           <div class="modal-footer">
-                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                           </div>
-                       </div>
-      
-          </div>
-    </div>
+
 
           <footer class="container-fluid navbar navbar-inverse navbar-bottom" style="margin-top:200px">
           <b>Copyright&copy;INAYAT HUSSAIN</b>
