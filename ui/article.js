@@ -294,7 +294,7 @@ window.onload=function() {
         console.log(password);
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({name:name,email:email, password: password}));  
+        request.send(JSON.stringify({name:name, email:email, password: password}));  
         register.value = 'Registering...';
     
     };
