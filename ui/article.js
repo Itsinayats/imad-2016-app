@@ -2,88 +2,12 @@ console.log("loaded article.js");
 
    //load register modal
    
-     function loadRegisterModal(){
-           var act1  = document.getElementById('act1');
-   var x=`      
-  <div class="modal fade" id="registerModal" role="dialog">
-         <div class="modal-dialog">
-    
-                     <div class="modal-content">
-                         <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              <h4 class="modal-title">Register</h4>
-                         </div>
-                         <span id="msg" style="color:red"></span>
-                               <div class="modal-body">
-                                 <form name='register'>
-                                      <div class="form-group">
-                                               <label for="name">Full Name:</label>
-                                                   <input type="text" class="form-control" id="name">
-                                      </div>
-                                      <div class="form-group">
-                                               <label for="email">Email address:</label>
-                                                   <input type="email" class="form-control" id="email">
-                                      </div>
-                                      
-                                     <div class="form-group">
-                                             <label for="pwd">Password:</label>
-                                            <input type="password" class="form-control" id="password">
-                                     </div>
-                                     
-                                   <button type="button" class="btn btn-default" id="register_btn">Register</button>
-                               </form>
-                           </div>
-                           <div class="modal-footer">
-                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                           </div>
-                       </div>
-      
-          </div>
-    </div>`;
-    act1.innerHTML=x;
-}
 
 //load login model
 function loadLoginModal(){
     var act2  = document.getElementById('act2');
  
-   var x=`<!-- LoginModal -->
-  <div class="modal fade" id="loginModal" role="dialog">
-             <div class="modal-dialog">
-    
-
-      <!-- Modal content-->
-                        <div class="modal-content">
-                              <div class="modal-header">
-                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                         <h4 class="modal-title">Login</h4>
-                              </div>
-                                      <div class="modal-body">
-                                              <form>
-                                                  <div class="form-group">
-                                                           <label for="email">Email address:</label>
-                                                           <input type="email" class="form-control" id="email">
-                                                  </div>
-                                                  
-                                                   <div class="form-group">
-                                                         <label for="pwd">Password:</label>
-                                                        <input type="password" class="form-control" id="pwd">
-                                                   </div>
-                                                   
-                                                   <div class="checkbox">
-                                                   <label><input type="checkbox"> Remember me</label>
-                                                   </div>
-                                                   
-                                                  <button type="submit" class="btn btn-default">Submit</button>
-                                               </form>
-                                        </div>
-                                           <div class="modal-footer">
-                                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                           </div>
-                        </div>
-      
-              </div>
-  </div>`;
+   var x=``;
       act2.innerHTML=x;
 
 }
