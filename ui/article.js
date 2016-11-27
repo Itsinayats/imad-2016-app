@@ -1,26 +1,4 @@
 console.log("loaded article.js");
-
-   //load register modal
-   
-
-//load login model
-function loadLoginModal(){
-    var act2  = document.getElementById('act2');
- 
-   var x=``;
-      act2.innerHTML=x;
-
-}
- 
- document.getElementById('registerbtn').onclick=function(){
-    
-     $('#registerModal').modal('show');
-     
- };
- document.getElementById('loginbtn').onclick=function(){
-   
-     $('#loginModal').modal('show');
- };
     
 
 
