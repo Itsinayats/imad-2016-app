@@ -401,3 +401,5 @@ window.onload=function() {
         
         
     };
+     loadRegisterModal();
+      loadRegisterModal();
