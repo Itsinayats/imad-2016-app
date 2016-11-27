@@ -291,6 +291,11 @@ app.post('/create-user', function (req, res) {
    var name = req.body.name;
    var email= req.body.email;
    var password = req.body.password;
+    if((name== '')||(password== '')||(email== '')){
+            alert("name/email/password cannot be blank!!");
+        }
+        else{
+ 
    var salt = crypto.randomBytes(128).toString('hex');
    var dbString = hash(password, salt);
    pool.query('INSERT INTO users(name,email,password) VALUES ($1, $2, $3)', [name,email, dbString], function (err, result) {
@@ -300,7 +305,9 @@ app.post('/create-user', function (req, res) {
           res.send(name+'!!!You have successfully registered!!');
       }
    });
+        }
 });
+
 
 
 
