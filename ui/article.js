@@ -272,9 +272,10 @@ window.onload=function() {
       
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
-          var msg = JSON.parse(this.responseText);
+         
             
               if (request.status === 200) {
+                   var msg = JSON.parse(this.responseText);
                   alert('User created successfully');
                   register.value = 'Registered!';
               } else {
