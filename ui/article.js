@@ -275,7 +275,6 @@ window.onload=function() {
          
             
               if (request.status === 200) {
-                   var msg = JSON.parse(this.responseText);
                   alert('User created successfully');
                   register.value = 'Registered!';
               } else {
@@ -296,6 +295,5 @@ window.onload=function() {
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({name:name,email:email,password:password}));
-        msgg.innerHTML=msg.toString();
-        
+        msgg.innerHTML="Please wait....";
     };
