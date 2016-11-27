@@ -279,7 +279,11 @@ window.onload=function() {
                   alert('User created successfully');
                   register.innerHTML = 'Registered!';
                   register.disabled='true';
-              } else {
+              }
+              else if(request.status === 500){
+                  alert('username/password/email cannot be blank!!!');
+              }
+              else {
                   alert('Could not register the user');
                   register.value = 'Register';
               }
