@@ -236,8 +236,7 @@ catbtn.onclick=function () {
 
 //perform on windows start.
 window.onload=function() {
-      loadRegisterModal();
-      loadRegisterModal();
+     
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -303,5 +302,4 @@ window.onload=function() {
         
         
     };
-     loadRegisterModal();
-      loadRegisterModal();
+    
