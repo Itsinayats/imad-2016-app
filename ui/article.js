@@ -3,7 +3,7 @@ console.log("loaded article.js");
    //load register modal
    
      function loadRegisterModal(){
-           var act  = document.getElementById('act');
+           var act1  = document.getElementById('act1');
    var x=`      
   <div class="modal fade" id="registerModal" role="dialog">
          <div class="modal-dialog">
@@ -40,12 +40,12 @@ console.log("loaded article.js");
       
           </div>
     </div>`;
-    act.innerHTML=x;
+    act1.innerHTML=x;
 }
 
 //load login model
 function loadLoginModal(){
-    var act  = document.getElementById('act');
+    var act2  = document.getElementById('act2');
  
    var x=`<!-- LoginModal -->
   <div class="modal fade" id="loginModal" role="dialog">
@@ -84,7 +84,7 @@ function loadLoginModal(){
       
               </div>
   </div>`;
-      act.innerHTML=x;
+      act2.innerHTML=x;
 
 }
  
