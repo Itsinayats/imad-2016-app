@@ -318,6 +318,7 @@ window.onload=function() {
               // Take some action
               if (request.status === 200) {
                   submit.value = 'Sucess!';
+                  submit.disabled="true";
               } else if (request.status === 403) {
                   submit.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
@@ -342,7 +343,7 @@ window.onload=function() {
         request.open('POST', '/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({email: email, password: password}));  
-        submit.value = 'Logging in...';
+        submit.innerHTML = 'Logging in...';
         
     };
     
