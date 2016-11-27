@@ -335,8 +335,8 @@ window.onload=function() {
 
 		
         // Make the request
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+        var email = document.loginForm.email.value;
+        var password = document.loginForm.password.value;
         console.log(email);
         console.log(password);
         request.open('POST', '/login', true);
