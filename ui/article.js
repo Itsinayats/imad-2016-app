@@ -277,6 +277,7 @@ window.onload=function() {
               if (request.status === 200) {
                   alert('User created successfully');
                   register.innerHTML = 'Registered!';
+                  register.disabled='true';
               } else {
                   alert('Could not register the user');
                   register.value = 'Register';
