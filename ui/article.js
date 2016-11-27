@@ -267,13 +267,12 @@ window.onload=function() {
  
     var register = document.getElementById('register_btn');
     register.onclick = function () {
-       register.value = 'Registering...';
         var request = new XMLHttpRequest();
         
       
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
-          var articleData = JSON.parse(this.responseText);
+          var msg = JSON.parse(this.responseText);
             
               if (request.status === 200) {
                   alert('User created successfully');
