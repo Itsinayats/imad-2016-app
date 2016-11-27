@@ -1,5 +1,15 @@
 console.log("loaded article.js");
 
+error:function(error){
+          if(error.responseText == 'show')
+              alert("Please enter correct user name and password.");
+}
+
+error:function(error){
+          if(error.responseText == 'show')
+              alert("Please enter correct user name and password.");
+}
+
 
     
 
