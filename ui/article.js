@@ -290,7 +290,7 @@ window.onload=function() {
         var name = document.register.name.value;
         var email = document.register.email.value;
         var password = document.register.password.value;
-        if(name==''||password=''||email=''){
+        if((name== '')||(password== '')||(email== '')){
             msg.innerHTML="name/email/password cannot be blank!!"
         }
         console.log(name);
