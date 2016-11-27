@@ -285,6 +285,7 @@ window.onload=function() {
         };
         
         // Make the request
+        var msgg=document.getElementById('msg');
         var name = document.register.name.value;
         var email = document.register.email.value;
         var password = document.register.password.value;
@@ -293,6 +294,7 @@ window.onload=function() {
         console.log(password);
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({name:name,email:email,password:password})); 
-        $('#registerModal').modal('hide');
+        request.send(JSON.stringify({name:name,email:email,password:password}));
+        msgg.innerHTML=msg;
+        
     };
