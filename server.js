@@ -287,7 +287,7 @@ app.post('/create-user', function (req, res) {
    var email= req.body.email;
    var password = req.body.password;
     if((name== '')||(password== '')||(email== '')){
-           res.send(500,'show') ;
+          res.status(500).send('name/email/password cannot be bank!!!!');
         }
         else{
  
