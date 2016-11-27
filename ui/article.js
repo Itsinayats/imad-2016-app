@@ -335,7 +335,7 @@ window.onload=function() {
 
 		
         // Make the request
-        var username = document.getElementById('email').value;
+        var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         console.log(email);
         console.log(password);
