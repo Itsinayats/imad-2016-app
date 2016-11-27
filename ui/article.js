@@ -276,7 +276,7 @@ window.onload=function() {
             
               if (request.status === 200) {
                   alert('User created successfully');
-                  register.value = 'Registered!';
+                  register.innerHTML = 'Registered!';
               } else {
                   alert('Could not register the user');
                   register.value = 'Register';
@@ -296,7 +296,6 @@ window.onload=function() {
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({name:name,email:email,password:password}));
         register.innerHTML="Please wait....";
-        msg.innerHTML="successfully registered"+msg;
         
         
     };
