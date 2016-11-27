@@ -273,6 +273,7 @@ window.onload=function() {
       
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
+          var articleData = JSON.parse(this.responseText);
             
               if (request.status === 200) {
                   alert('User created successfully');
