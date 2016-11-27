@@ -285,7 +285,7 @@ window.onload=function() {
         };
         
         // Make the request
-        var register = document.getElementById('register_btn');
+        var msg = document.getElementById('msg');
         var name = document.register.name.value;
         var email = document.register.email.value;
         var password = document.register.password.value;
@@ -296,4 +296,7 @@ window.onload=function() {
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({name:name,email:email,password:password}));
         register.innerHTML="Please wait....";
+        msg.innerHTML="successfully registered"+msg;
+        
+        
     };
