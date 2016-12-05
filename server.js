@@ -28,7 +28,8 @@ var config = {
 app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-/*
+
+
 //CONNECTION CREATION
 var pool=new Pool(config);
 app.get('/test-db', function (req, res) {
@@ -307,8 +308,7 @@ app.post('/create-user', function (req, res) {
         
 });
 
-*/
-/*
+
 
 
 app.post('/login', function (req, res) {
@@ -347,7 +347,6 @@ app.post('/login', function (req, res) {
 
 
 
-*/
 
 
 
