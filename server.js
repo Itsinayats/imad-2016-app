@@ -310,7 +310,7 @@ app.post('/create-user', function (req, res) {
 
 
 
-
+/*
 app.post('/login', function (req, res) {
    var email = req.body.email;
    var password = req.body.password;
@@ -351,7 +351,7 @@ app.post('/login', function (req, res) {
 
 
 
-
+*/
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
